@@ -1,12 +1,25 @@
 @media (min-width:768px) and (max-width:1200px){
 
+
     .container {
         max-width: 768px;
-        padding: 16px;
+        padding:0px  16px;
+    }
+
+    .slide:nth-child(1){
+        padding-top:16px;
+    }
+
+    .simpTitle{
+        font-size: 10px;
+    }
+    
+    .simpText{
+        font-size: 24px;
     }
 
     .tablet{
-        display:block;
+        display:block ;
     }
     .platform{
         margin-top:40px;
@@ -139,7 +152,224 @@
     
     .functionsEl{
         font-size: 13px;
+        height:104px;
+    }
+    .functionsEl>div{
+        max-width:280px;
     }
 
+    /*************************/
+
+    .fastClear{
+        margin-top:160px;
+    }
+
+    .fastClearText{
+        font-size: 11px;
+    }
+
+    .fastClearTitle{
+        font-size: 30px;
+    }
+
+    .fastClearColTop{
+        width:332px;
+    }
+
+    .fastClearCol:nth-child(1){
+        flex-direction: row;
+        justify-content: flex-start;
+        flex:1 1 100%;
+        display: flex;
+        gap:40px;
+    }
+
+    .fastClearColBot{
+        width: 178px;
+    }
+
+    .fastClear{
+        flex-direction:column;
+        gap:78px;
+    }
+
+    .fastClearCons{
+        font-size: 13px;
+        border-radius: 12px 12px 0px 0px;
+    }
+
+    .fastClearTg{
+        font-size: 13px;
+    }
+
+    .fastClearEls{
+        gap:8px;
+    }
+
+    .fastClearEl{
+        padding: 16px;
+        font-size: 13px;
+    }
+
+    .fastClearEl:nth-child(1){
+        width:271px;
+    }
+
+    .fastClearEl:nth-child(1)::after{
+        right:16px;
+        bottom:16px;
+    }
+
+    .fastClearEl:nth-child(2){
+        width:178px;
+    }
+
+    .fastClearEl:nth-child(3){
+        width:271px;
+    }
+
+    .fastClearEl:nth-child(4){
+        width:271px;
+    }
+
+    .fastClearEl:nth-child(4)::after{
+        right:16px;
+        bottom:16px;
+    }
+
+
+    .fastClearEl:nth-child(5){
+        width:271px;
+    }
+
+    .fastClearEl:nth-child(6){
+        width:178px;
+    }
+
+    .fastClearEl:nth-child(7){
+        width:271px;
+    }
+
+    .fastClearEl:nth-child(8){
+        width:178px;
+    }
+
+    .fastClearEl:nth-child(9){
+        width:271px;
+    }
+
+    .fastClearEl:nth-child(10){
+        width:178px;
+    }
+
+    .fastClearEl:nth-child(11){
+        width:271px;
+    }
+
+    .fastClearEl:nth-child(12){
+        width:271px;
+    }
+
+    /*********************************/
+
+    .arch{
+        margin-top:160px;
+        gap:60px;
+    }
+
+    .archCol:nth-child(1){
+        gap:40px;
+    }
+
+    .archColLeft{
+        flex:0 0 332px;
+    }
+
+    .archColRight{
+        font-size: 13px;
+    }
+
+    .archCol:nth-child(2){
+        gap:222px;
+    }
+
+    .archColBur{
+        width: 150px;
+        height:324px;
+    }
+
+    .archEls{
+        gap:8px;
+    }
+
+    .archEl{
+        display:flex;
+        gap:0px;
+        height:137px;
+        padding: 16px;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+
+    .archElLeft{
+        flex:0 0 auto;
+        font-size: 16px;
+    }
+
+    .archElRight{
+        flex:0 0 auto;
+        font-size: 13px;
+    }
+
+    /*********************************/
+
+    .driver{
+        gap:60px;
+        margin-top:160px;
+    }
+
+    .driverCol:nth-child(1){
+        gap:40px;
+    }
+
+    .driverColLeft{
+        flex:0 0 332px;
+    }
+
+    .driverColRight{
+        font-size: 16px;
+    }
+
+    .driverCol:nth-child(2){
+        gap:101px;
+    }
+
+    .driverEls{
+        gap:8px;
+    }
+
+    .driverEl{
+        padding: 16px;
+        width: 224px;
+        height: 80px;
+        font-size: 13px;
+    }
+
+    .driverForm{
+        flex:0 0 178px;
+        margin-bottom:16px;
+    }
+
+    .driverCons {
+        border-radius: 12px 12px 0px 0px;
+        padding: 20px;
+        font-size: 13px;
+    }
+
+    .driverTg{
+        font-size: 13px;
+    }
 
 }

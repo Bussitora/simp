@@ -3,9 +3,21 @@
         display:block;
     }
 
+    .slide:nth-child(1){
+        padding-top:16px;
+    }
+
+    .simpTitle{
+        font-size: 10px;
+    }
+    
+    .simpText{
+        font-size: 24px;
+    }
+
     .container {
         max-width: 360px;
-        padding: 16px;
+        padding:0px 16px;
     }
 
     .platform{
@@ -73,13 +85,6 @@
         margin-top:76px;
     }
 
-    .futureTopText{
-        font-size:24px;
-    }
-
-    .futureTopTitle{
-        font-size:10px;
-    }
     .futureBotCol span{
         font-size:16px;
         text-align: center;
@@ -137,6 +142,234 @@
     
     .functionsEl{
         flex:1 1 100%;
+        font-size: 13px;
+        height:104px;
+    }
+    .functionsEl>div{
+        max-width:280px;
+    }
+
+    /*************************/
+
+    .fastClear{
+        margin-top:100px;
+    }
+
+    .fastClearColTop{
+        width:100%;
+    }
+
+    .fastClearCol:nth-child(1){
+        flex-direction: row;
+        justify-content: flex-start;
+        flex:1 1 100%;
+        display: flex;
+        gap:40px;
+    }
+
+    .fastClearColBot{
+        display:none;
+    }
+
+    .fastClear{
+        flex-direction:column;
+        gap:60px;
+    }
+
+    .fastClearCons{
+        font-size: 13px;
+        border-radius: 12px 12px 0px 0px;
+    }
+
+    .fastClearTg{
+        font-size: 13px;
+    }
+
+    .fastClearEls{
+        gap:8px;
+    }
+
+    .fastClearEl{
+        padding: 16px;
+        font-size: 13px;
+    }
+
+    .fastClearEl:nth-child(1){
+        width:100%;
+    }
+
+    .fastClearEl:nth-child(1)::after{
+        right:16px;
+        bottom:16px;
+    }
+
+    .fastClearEl:nth-child(2){
+        width:160px;
+    }
+
+    .fastClearEl:nth-child(3){
+        width:160px;
+    }
+
+    .fastClearEl:nth-child(4){
+        width:100%;
+    }
+
+    .fastClearEl:nth-child(4)::after{
+        right:16px;
+        bottom:16px;
+    }
+
+
+    .fastClearEl:nth-child(5){
+        width:160px;
+    }
+
+    .fastClearEl:nth-child(6){
+        width:160px;
+    }
+
+    .fastClearEl:nth-child(7){
+        width:100%;
+    }
+
+    .fastClearEl:nth-child(8){
+        width:160px;
+    }
+
+    .fastClearEl:nth-child(9){
+        width:160px;
+    }
+
+    .fastClearEl:nth-child(10){
+        width:160px;
+    }
+
+    .fastClearEl:nth-child(11){
+        width:160px;
+    }
+
+    .fastClearEl:nth-child(12){
+        width:100%;
+    }
+
+    .fastClearBot{
+        display:block;
+        margin-top:60px;
+    }
+
+    /*********************************/
+
+    .arch{
+        margin-top:100px;
+        gap:40px;
+    }
+
+    .archCol:nth-child(1){
+        gap:16px;
+        flex-direction: column;
+    }
+
+    .archColLeft{
+        flex:0 0 auto;
+    }
+
+    .archColRight{
+        padding:0;
+        flex:0 0 auto;
+        font-size: 13px;
+    }
+
+    .archCol:nth-child(2){
+        gap:0px;
+        flex-direction: column;
+    }
+
+    .archColBur{
+        width: 150px;
+        height:324px;
+    }
+
+    .archEls{
+        gap:8px;
+        margin-top:-27px;
+    }
+
+    .archEl{
+        display:flex;
+        gap:0px;
+        height:130px;
+        padding: 16px;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .archElLeft{
+        flex:0 0 auto;
+        font-size: 16px;
+    }
+
+    .archElRight{
+        flex:0 0 auto;
+        font-size: 13px;
+    }
+
+
+    /*********************************/
+
+    .driver{
+        gap:60px;
+        margin-top:100px;
+    }
+
+    .driverCol:nth-child(1){
+        gap:16px;
+        flex-direction:column;
+    }
+
+    .driverColLeft{
+        flex:0 0 auto;
+    }
+
+    .driverColRight{
+        font-size: 16px;
+        flex:0 0 auto;
+        padding-top:0px;
+    }
+
+    .driverCol:nth-child(2){
+        gap:37px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .driverEls{
+        gap:8px;
+        order:1;
+    }
+
+    .driverEl{
+        padding: 16px;
+        width: 159px;
+        height: 80px;
+        font-size: 13px;
+    }
+
+    .driverForm{
+        order:2;
+        flex:0 0 auto;
+        width:100%;
+        margin-bottom:0px;
+    }
+
+    .driverCons {
+        border-radius: 12px 12px 0px 0px;
+        padding: 20px;
+        font-size: 13px;
+    }
+
+    .driverTg{
         font-size: 13px;
     }
 }
