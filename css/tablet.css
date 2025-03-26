@@ -1,5 +1,145 @@
 @media (min-width:768px) and (max-width:1200px){
+
+    .container {
+        max-width: 768px;
+        padding: 16px;
+    }
+
     .tablet{
         display:block;
     }
+    .platform{
+        margin-top:40px;
+    }
+
+    .platformContent{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .platformContentText{
+        flex: 0 0 auto;
+    }
+    .platformContentText .title{
+        font-size: 24px;
+    }
+
+    .platformContentText .text{
+        font-size: 16px;
+        margin-top: 16px;
+    }
+
+    .dwn{
+        font-size: 13px;
+    }
+
+    .platformContent{
+        gap:40px;
+    }
+
+    .platformContentMediaTop {
+        padding: 40px 40px 32px 40px;
+    }
+    
+    .platformContentMediaMenu{
+        gap:28px;
+    }
+
+    .platformSoc{
+        margin-top:50px;
+    }
+
+    .platformSocMenu a {
+        font-size: 13px;
+    }
+    
+    .platformContentMediaMenu span{
+        font-size: 10px;
+    }
+
+    .platformContentMediaBtn{
+        font-size:13px;
+    }
+
+
+    /***************************************/
+
+
+    .futureTop{
+        top:0;
+    }
+    .future{
+        padding-top:0;
+    }
+
+    .futureTopText{
+        font-size:24px;
+    }
+
+    .futureTopTitle{
+        font-size:10px;
+    }
+    .futureBotCol span{
+        font-size:16px;
+        text-align: center;
+        max-width:130px;
+    }
+
+    .futureBotBg{
+        position: absolute;
+        width: 286px;
+        height: 353px;
+        margin-top: -184px;
+        margin-left: -143px;
+        background-image: url(../media/img/futureT.svg);
+    }
+
+    .futureBot{
+        min-height:913px;
+        flex-direction: column;
+        gap:366px;
+        background-image: url(../media/img/blueDotsT.svg);
+    }
+
+    .futureBotCol{
+        flex-direction: row;
+        gap:0px;
+    }
+
+    /*********************************/
+
+    .functions{
+        display:flex;
+        gap:70px;
+        flex-direction: column;
+        margin-top:160px;
+    }
+    
+    .functionsCol{
+        display:flex;
+    }
+    
+    .functionsCol:nth-child(1){
+        flex-direction: row;
+        justify-content: space-between;
+        flex:1 1 auto;
+        gap:16px;
+    }
+    
+    .functionsTitle{
+        flex:1 1 40%;
+        font-size: 24px;
+        padding-right:60px;
+    }
+    
+    .functionsText{
+        flex:1 1 40%;
+        font-size: 13px;
+    }
+    
+    .functionsEl{
+        font-size: 13px;
+    }
+
+
 }
