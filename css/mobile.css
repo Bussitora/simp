@@ -417,63 +417,154 @@
 
     /************************************/
 
-        .storage{
-            margin-top:100px;
-        }
-    
-        .storageTop{
-            gap:16px;
-            flex-direction: column;
-        }
-    
-        .storageTopText{
-            flex:0 0 auto;
-        }
-    
-        .storageTopDesc{
-            flex:0 0 auto;
-            padding-top:0px;
-            font-size: 13px;
-        }
-    
-        .storageBot{
-            gap:60px;
-            flex-direction: column;
-        }
-    
-        .storagePresentation{
-            flex:0 0 auto;
-            width:100%;
-            order:2;
-        }
-    
-        .storageEls{
-            gap:8px;
-            order:1;
-        }
-    
-        .storageEl{
-            flex:1 1 100%;
-            padding: 16px;
-            height: 121px;
-        }
-    
-        .storageElTitle{
-            font-size: 16px;
-        }
-    
-        .storageElDescText{
-            font-size: 10px;
-        }
-    
-        .storageBotPresentationTop{
-            border-radius: 12px 12px 0px 0px;
-            padding: 20px;
-            font-size: 13px;
-            padding-right: 100px;
-        }
-    
-        .storageBotPresentationBot{
-            font-size: 13px;
-        }
+    .storage{
+        margin-top:100px;
+    }
+
+    .storageTop{
+        gap:16px;
+        flex-direction: column;
+    }
+
+    .storageTopText{
+        flex:0 0 auto;
+    }
+
+    .storageTopDesc{
+        flex:0 0 auto;
+        padding-top:0px;
+        font-size: 13px;
+    }
+
+    .storageBot{
+        gap:60px;
+        flex-direction: column;
+    }
+
+    .storagePresentation{
+        flex:0 0 auto;
+        width:100%;
+        order:2;
+    }
+
+    .storageEls{
+        gap:8px;
+        order:1;
+    }
+
+    .storageEl{
+        flex:1 1 100%;
+        padding: 16px;
+        height: 121px;
+    }
+
+    .storageElTitle{
+        font-size: 16px;
+    }
+
+    .storageElDescText{
+        font-size: 10px;
+    }
+
+    .storageBotPresentationTop{
+        border-radius: 12px 12px 0px 0px;
+        padding: 20px;
+        font-size: 13px;
+        padding-right: 100px;
+    }
+
+    .storageBotPresentationBot{
+        font-size: 13px;
+    }
+
+    /************************************************/
+
+    .astra{
+        margin-top:100px;
+        gap:60px;
+        padding:16px;
+        background-image: url("../media/img/linuxBgM.png");
+    }
+
+    .astraTop{
+        display:flex;
+        gap:16px;
+        flex-direction: column;
+    }
+
+    .astraTextOb{
+        flex:0 0 100%;
+    }
+
+    .astraDesc{
+        padding-top:0px;
+        display:flex;
+        gap:26px;
+    }
+
+    .astraDescContent{
+        display:flex;
+        flex-direction: column;
+        gap:16px;
+        flex:0 0 100%;
+    }
+
+    .astraDescContentText{
+        font-size: 13px;
+    }
+
+    .astraDescPic{
+        display:none;
+    }
+
+    .astraDescContent .dwn{
+        display:none;
+    }
+
+    .astraBot{
+        border: none;
+        border-radius:0px;
+        padding:0px 24px 0px 32px;
+    }
+
+    .astraBotElsIn{
+        gap:8px;
+    }
+
+    .astraBotEl{
+        width: 116px;
+        height: 116px;
+        padding:16px;
+        font-size: 13px;
+        background: var(--dark);
+        border:none;
+    }
+
+    .astraBotEl:nth-child(1)::before{
+        display:none;
+    }
+
+    .astraBotEl:nth-child(1)::after{
+        display:none;
+    }
+
+    .astraBotEl:nth-child(2)::before{
+        display:none;
+    }
+
+    .astraBotEl:nth-child(4)::before{
+        display:none;
+    }
+
+    .astraBotReserv{
+        left: -40px;
+        top: 50%;
+        margin-top:-36px;
+        font-size: 13px;
+
+    }
+
+    .astraBotElsBot{
+        font-size: 13px;
+    }
 }

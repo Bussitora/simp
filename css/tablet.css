@@ -465,4 +465,93 @@
         font-size: 13px;
     }
 
+
+    /************************************************/
+
+    .astra{
+        margin-top:160px;
+        gap:60px;
+        background-image: url("../media/img/linuxBgT.png");
+    }
+
+    .astraTop{
+        display:flex;
+        gap:84px;
+    }
+
+    .astraTextOb{
+        flex:0 0 332px;
+    }
+
+    .astraDesc{
+        padding-top:32px;
+        display:flex;
+        gap:26px;
+    }
+
+    .astraDescContent{
+        display:flex;
+        flex-direction: column;
+        gap:16px;
+        flex:0 0 256px;
+    }
+
+    .astraDescContentText{
+        font-size: 13px;
+    }
+
+    .astraDescPic{
+        display:none;
+    }
+
+    .astraDescContent .dwn{
+        display:none;
+    }
+
+    .astraBot{
+        border: none;
+        border-radius:0px;
+        padding:0px 40px 0px 48px;
+    }
+
+    .astraBotElsIn{
+        gap:8px;
+    }
+
+    .astraBotEl{
+        width: 288px;
+        height: 116px;
+        padding:16px;
+        font-size: 16px;
+        background: var(--dark);
+        border:none;
+    }
+
+    .astraBotEl:nth-child(1)::before{
+        display:none;
+    }
+
+    .astraBotEl:nth-child(1)::after{
+        display:none;
+    }
+
+    .astraBotEl:nth-child(2)::before{
+        display:none;
+    }
+
+    .astraBotEl:nth-child(4)::before{
+        display:none;
+    }
+
+    .astraBotReserv{
+        left: -30px;
+        top: 50%;
+        margin-top:-36px;
+        font-size: 13px;
+
+    }
+
+    .astraBotElsBot{
+        font-size: 13px;
+    }
 }
