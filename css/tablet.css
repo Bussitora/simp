@@ -372,4 +372,97 @@
         font-size: 13px;
     }
 
+
+    /***************************/
+
+    .lua{
+        margin-top:160px;
+        gap:110px;
+        background-image: url("../media/img/luaBgT.png");
+    }
+
+    .luaTop{
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .luaTopText{
+        flex:0 0 332px;
+    }
+
+    .luaTopLogo{
+        width:146px;
+        height:146px;
+    }
+
+    .luaBot{
+        gap:101px;
+    }
+
+    .luaBotText{
+        flex:0 0 286px;
+        font-size: 13px;
+    }
+
+    .luaBotInfo{
+        flex:0 0 239px;
+        font-size: 13px;
+    }
+
+    /************************************/
+
+    .storage{
+        margin-top:160px;
+    }
+
+    .storageTop{
+        gap:40px;
+    }
+
+    .storageTopText{
+        flex:0 0 332px;
+    }
+
+    .storageTopDesc{
+        flex:0 0 332px;
+        padding-top:44px;
+        font-size: 13px;
+    }
+
+    .storageBot{
+        gap:101px;
+    }
+
+    .storagePresentation{
+        flex:0 0 178px;
+    }
+
+    .storageEls{
+        gap:8px;
+    }
+
+    .storageEl{
+        flex:1 1 100%;
+        padding: 16px;
+        height: 121px;
+    }
+
+    .storageElTitle{
+        font-size: 16px;
+    }
+
+    .storageElDescText{
+        font-size: 10px;
+    }
+
+    .storageBotPresentationTop{
+        border-radius: 12px 12px 0px 0px;
+        padding: 20px;
+        font-size: 13px;
+    }
+
+    .storageBotPresentationBot{
+        font-size: 13px;
+    }
+
 }

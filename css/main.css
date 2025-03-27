@@ -571,7 +571,7 @@ body{
 }
 
 .archColRight{
-    padding-top:33px;
+    padding-top:32px;
     flex:0 0 332px;
     font-family: var(--font-family);
     font-weight: 400;
@@ -652,7 +652,7 @@ body{
 }
 
 .driverColRight{
-    padding-top:33px;
+    padding-top:32px;
     flex:0 0 332px;
     font-family: var(--font-family);
     font-weight: 400;
@@ -706,6 +706,237 @@ body{
 }
 
 .driverTg{
+    background: var(--main);
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: #1c1c1e;
+}
+
+
+/***************************/
+
+.lua{
+    border-radius: 12px;
+    padding:32px;
+    display:flex;
+    flex-direction: column;
+    gap:62px;
+    background-image: url("../media/img/luaBgD.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.luaTop{
+    display:flex;
+    justify-content: space-between;
+}
+
+.luaTopText{
+    flex:0 0 332px;
+}
+
+.luaTopLogo{
+    width:184px;
+    height:184px;
+    background-image: url("../media/img/lua.svg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.luaTitle{
+    color: var(--white);
+}
+
+.luaText{
+    margin-top:20px;
+}
+
+.luaBot{
+    display:flex;
+    gap:480px;
+    align-items: flex-end;
+}
+
+.luaBotText{
+    flex:0 0 332px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--white);
+}
+
+.luaBotInfo{
+    flex:0 0 300px;
+    border: 1px solid var(--white);
+    border-radius: 12px;
+    padding: 16px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--white);
+}
+
+
+
+/************************************/
+
+.storage{
+    display:flex;
+    flex-direction: column;
+    gap:60px;
+}
+
+.storageTop{
+    display:flex;
+    gap:480px;
+}
+
+.storageTopText{
+    flex:0 0 332px;
+}
+
+.storageText{
+    margin-top:20px;
+}
+
+.storageTopDesc{
+    padding-top:32px;
+    flex:0 0 332px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--second);
+}
+
+.storageBot{
+    display:flex;
+    gap:248px;
+    align-items: flex-end;
+}
+
+
+.storageEls{
+    display:flex;
+    flex-wrap: wrap;
+    gap:16px;
+}
+
+.storageEl{
+    flex:1 1 40%;
+    background: var(--dark);
+    border-radius: 12px;
+    padding: 20px;
+    height: 139px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.storageElTitle{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 120%;
+    color: var(--white);
+}
+
+.storageElDesc{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.storageElDescText{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 120%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--third);
+}
+
+.storageEl:nth-child(1) .storageElDescPic{
+    width:48px;
+    height:49px;
+    background-image: url("../media/img/PostgreSQL.svg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom:-6px;
+}
+
+.storageEl:nth-child(2) .storageElDescPic{
+    width:90px;
+    height:27px;
+    background-image: url("../media/img/PostgreSQLPRO.svg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.storageEl:nth-child(3) .storageElDescPic{
+    width:78px;
+    height:37px;
+    background-image: url("../media/img/SQLite.svg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom:-5px;
+}
+
+.storageEl:nth-child(4) .storageElDescPic{
+    width:61px;
+    height:22px;
+    background-image: url("../media/img/Tantor.svg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.storagePresentation{
+    flex: 0 0 216px;
+    display: flex;
+    flex-direction: column;
+}
+
+.storageBotPresentationTop{
+    border-radius: 20px 20px 0px 0px;
+    padding: 26px;
+    background: var(--dark);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--white);
+}
+
+.storageBotPresentationTop::before{
+    display:block;
+    content:'';
+    width:32px;
+    height:32px;
+    background-image: url("../media/img/doc.svg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom:20px;
+}
+
+.storageBotPresentationBot{
     background: var(--main);
     border-radius: 0 0 12px 12px;
     display: flex;
