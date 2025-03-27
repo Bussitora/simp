@@ -1112,6 +1112,7 @@ body{
     line-height: 120%;
     color: var(--second);
     transform-origin: center center;
+    margin-top: -40px;
 }
 
 .astraBotElsBot{
@@ -1134,4 +1135,67 @@ body{
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+/**************************************************/
+
+
+.footerIn{
+    height:226px;
+    padding:20px;
+}
+
+.footerTop{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerTopLogo{
+    font-family: var(--third-family);
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: -0.03em;
+    color: var(--main);
+    display:flex;
+    gap:12px;
+    align-items: center;
+}
+
+.footerTopLogo::before{
+    content:"";
+    width:25px;
+    height:28px;
+    background:url("../media/img/logo.svg");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
+.footerTopContactPhone{
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    color: var(--main);
+}
+
+.footerTopContact{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+}
+
+.footerTopContactSoc{
+    display:flex;
+    gap:24px;
+}
+
+.footerTopContactSoc>a{
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    color: var(--main);
 }

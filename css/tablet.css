@@ -554,4 +554,28 @@
     .astraBotElsBot{
         font-size: 13px;
     }
+
+    /**************************************************/
+
+
+    .footerIn{
+        height:173px;
+    }
+
+    .footerTop{
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .footerTopLogo{
+        font-size: 28px;
+    }
+
+    .footerTopContactPhone{
+        font-size: 24px;
+    }
+
+    .footerTopContactSoc>a{
+        font-size: 24px;
+    }
 }
