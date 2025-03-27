@@ -653,4 +653,44 @@
     .kaspBotDocsLinksEl{
         font-size: 13px;
     }
+
+    
+    /*********************************/
+
+    .distr{
+        margin-top: 160px;
+        gap:60px;
+    }
+
+    .distrTop{
+        width:332px;    
+    }
+
+    .distrBot{
+        gap:8px;
+    }
+
+    .distrBotEl{
+        flex:1 1 40%;
+    }
+
+    .distrBotElBlock{ 
+        height: 240px; 
+    }
+
+    .distrBotEl:nth-child(1) .distrBotElBlockLogo{
+        width:257px;
+        height:38px;
+    }
+
+    .distrBotEl:nth-child(2) .distrBotElBlockLogo{
+        width:220px;
+        height:76px;
+    }
+
+    .distrBotElDesc{
+        margin-top:8px;
+        font-size: 13px;
+    }
+
 }

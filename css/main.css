@@ -1369,3 +1369,64 @@ body{
     line-height: 120%;
     color: var(--main);
 }
+
+/*********************************/
+
+.distr{
+    display:flex;
+    flex-direction: column;
+    gap:80px;
+}
+
+.distrText{
+    margin-top:20px;
+}
+
+.distrTop{
+    width:332px;    
+}
+
+.distrBot{
+    display:flex;
+    gap:16px;
+}
+
+.distrBotEl{
+    flex:1 1 40%;
+}
+
+.distrBotElBlock{
+    border-radius: 12px;
+    height: 240px;
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.distrBotEl:nth-child(1) .distrBotElBlockLogo{
+    width:257px;
+    height:38px;
+    background-image: url(../media/img/scadasystem.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.distrBotEl:nth-child(2) .distrBotElBlockLogo{
+    width:220px;
+    height:76px;
+    background-image: url(../media/img/evopribir.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.distrBotElDesc{
+    margin-top:16px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--white);
+}
