@@ -610,4 +610,102 @@
     .footerTopContactSoc>a{
         font-size: 24px;
     }
+
+    /************************************/
+
+    .kasp{
+        margin-top:100px;
+        gap:0;
+    }
+
+    .kaspTop{
+        gap:0px;
+        flex-direction: column;
+        gap:16px;
+    }
+
+    .kaspTopOne{
+        flex:0 0 100%;
+    }
+
+    .kaspTopTwo{
+        flex:0 0 100%;
+        font-size: 13px;
+        padding-top:0;
+    }
+
+    .kaspMid{
+        margin-top:60px;
+    }
+
+    .kaspMidEl{
+        flex:1 1 40%;
+        height:160px;
+    }
+    
+    .kaspMidKaspLogo{
+        width:102px;
+        height:35px;
+    }
+
+    .kaspMidKSimpLogo{
+        gap:11px;
+        font-size: 14px;
+    }
+
+    .kaspMidKSimpLogo::before{
+        width:15px;
+        height:17px;
+    }
+
+    .kaspBot{
+        margin-top:32px;
+        flex-direction: column;
+        gap:32px;
+    }
+
+    .kaspBotWinLin{
+        order:2;
+        flex:0 0 auto;
+        width:100%;
+    }
+
+    .kaspBotWinLinDesc{
+        border-radius: 12px 12px 0px 0px;
+        padding: 20px;
+        font-size: 13px;
+    }
+
+    .kaspBotWinLinLink{
+        font-size: 13px;
+    }
+
+    .kaspBotWinLinDesc::before{
+        margin-bottom: 16px;
+    }
+
+
+    .kaspBotDocs{
+        order:1;
+        flex:0 0 auto;
+        width:100%;
+        padding: 16px;
+        gap:100px;
+    }
+
+    .kaspBotDocsTitle{
+        font-size: 10px;
+    }
+
+    .kaspBotDocsLinks{
+        gap:32px;
+    }
+
+    .kaspBotDocsLinksTitle{
+        font-size: 13px;
+    }
+
+    .kaspBotDocsLinksEl{
+        font-size: 13px;
+    }
 }

@@ -1199,3 +1199,173 @@ body{
     line-height: 100%;
     color: var(--main);
 }
+
+/************************************/
+
+.kasp{
+    display:flex;
+    flex-direction: column;
+    gap:60px;
+}
+
+.kaspTop{
+    display: flex;
+    gap:480px;
+}
+
+.kaspTopOne{
+    flex:0 0 332px;
+}
+
+.kaspText{
+    margin-top:20px;
+}
+
+.kaspTopTwo{
+    flex:0 0 332px;
+    padding-top:32px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--second);
+}
+
+.kaspMid{
+    display:flex;
+    gap:2px;
+}
+
+.kaspMidEl{
+    flex:1 1 40%;
+    border-radius: 12px 0 0 12px;
+    height: 257px;
+    background: var(--dark);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kaspMidKaspLogo{
+    width:207px;
+    height:71px;
+    background:url("../media/img/kasp.svg");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
+.kaspMidKSimpLogo{
+    display: flex;
+    gap:22px;
+    font-family: var(--third-family);
+    font-weight: 500;
+    font-size: 29px;
+    line-height: 130%;
+    letter-spacing: -0.03em;
+    color: var(--white);
+}
+
+.kaspMidKSimpLogo::before{
+    width:31px;
+    height:34px;
+    content:'';
+    background:url("../media/img/logo.svg");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
+.kaspBot{
+    display: flex;
+    gap:596px;
+    align-items: flex-end;
+}
+
+.kaspBotWinLin{
+    flex:0 0 216px;
+    display: flex;
+    flex-direction: column;
+}
+
+.kaspBotWinLinDesc{
+    border-radius: 20px 20px 0px 0px;
+    padding: 26px;
+    background: var(--dark);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--white);
+}
+
+.kaspBotWinLinLink{
+    background: var(--main);
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: #1c1c1e;
+}
+
+.kaspBotWinLinDesc::before{
+    display: block;
+    content: '';
+    width: 79px;
+    height: 39px;
+    background-image: url(../media/img/winlin.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 26px;
+}
+
+
+.kaspBotDocs{
+    flex:0 0 448px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--dark);
+    border-radius: 12px;
+    padding: 16px;
+    gap:90px;
+}
+
+.kaspBotDocsTitle{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 120%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--500-white);
+}
+
+.kaspBotDocsLinks{
+    display: flex;
+    flex-direction: column;
+    gap:32px;
+}
+
+.kaspBotDocsLinksTitle{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--white);
+}
+
+.kaspBotDocsLinksEl{
+    justify-content: space-between;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--main);
+}

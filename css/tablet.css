@@ -578,4 +578,79 @@
     .footerTopContactSoc>a{
         font-size: 24px;
     }
+
+    /************************************/
+
+    .kasp{
+        margin-top:160px;
+    }
+
+    .kaspTop{
+        gap:40px;
+    }
+
+    .kaspTopOne{
+        flex:0 0 332px;
+    }
+
+    .kaspTopTwo{
+        flex:0 0 332px;
+        font-size: 13px;
+    }
+
+    .kaspMid{
+        display:flex;
+        gap:2px;
+    }
+
+    .kaspMidEl{
+        flex:1 1 40%;
+    }
+
+    .kaspBot{
+        gap:194px;
+    }
+
+    .kaspBotWinLin{
+        flex:0 0 178px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .kaspBotWinLinDesc{
+        border-radius: 12px 12px 0px 0px;
+        padding: 20px;
+        font-size: 13px;
+    }
+
+    .kaspBotWinLinLink{
+        font-size: 13px;
+    }
+
+    .kaspBotWinLinDesc::before{
+        margin-bottom: 16px;
+    }
+
+
+    .kaspBotDocs{
+        flex:0 0 364px;
+        padding: 16px;
+        gap:100px;
+    }
+
+    .kaspBotDocsTitle{
+        font-size: 10px;
+    }
+
+    .kaspBotDocsLinks{
+        gap:32px;
+    }
+
+    .kaspBotDocsLinksTitle{
+        font-size: 13px;
+    }
+
+    .kaspBotDocsLinksEl{
+        font-size: 13px;
+    }
 }
