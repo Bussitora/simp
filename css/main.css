@@ -1565,14 +1565,280 @@ a{
 .feedback{
     display:flex;
     gap:16px;
+    align-items: flex-start;
 }
 
 .feedbackInfo{
+    gap:185px;
     border-radius: 12px;
+    display:flex;
     background: var(--dark);
     flex:1 1 100%;
+    padding:20px 20px 70px 20px;
+    align-items:center;
+}
+
+
+.feedbackInfoText{
+    max-width:332px;
+    padding-top:32px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 120%;
+    color: var(--white);
+}
+
+.feedbackInfoStaff{
+    display:flex;
+    flex-direction: column;
+    gap:32px;
+    margin-top:40px;
+}
+
+.feedbackInfoStaffEl{
+    display: flex;
+    gap:16px;
+}
+
+.feedbackInfoStaffElPic{
+    flex:0 0 60px;
+}
+
+.feedbackInfoStaffElPic>img{
+    border-radius: 50%;
+}
+
+.feedbackInfoStaffElText{
+    padding:6px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.feedbackInfoStaffElName{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--white);
+}
+
+.feedbackInfoStaffElPosition{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 120%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--500-white);
 }
 
 .feedbackForm{
     flex:0 0 448px;
+    display:flex;
+    flex-direction: column;
+}
+
+.feedbackAgreement{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--second);
+    margin-top:25px;
+    padding:0px 24px 0px 16px;
+}
+
+.feedbackForm>form{
+    display:flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow:hidden;
+}
+
+.feedbackFormEl{
+    position:relative;
+    margin-top:1px;
+}
+
+.feedbackFormEl:nth-child(1){
+    margin-top:0px;
+}
+
+.feedbackFormEl>label{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 6px;
+    line-height: 120%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--500-white);
+    position:absolute;
+    top:23px;
+    left:16px;
+}
+
+.feedbackFormEl>input[type='text'],.feedbackFormEl>input[type='email']{
+    min-height:75px;
+    padding:34px 26px 22px 16px;
+    width:100%;
+    background: rgba(255, 255, 255, 0.07);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--white);
+}
+
+input[type="submit"].feedbackFormSubmit{
+    padding: 20px;
+    height: 64px;
+    background: var(--main);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #1c1c1e;
+    transition:0.2s;
+}
+input[type="submit"].feedbackFormSubmit:hover{
+    color:var(--white);
+}
+
+.feedbackFormEl.required::after{
+    content:'';
+    position:absolute;
+    right:16px;
+    top:33px;
+    width: 10px;
+    height: 10px;
+    background-image: url(../media/img/required.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/********************************/
+
+.download{
+    min-height:668px;
+    background-image: url(../media/img/downloadD.svg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:flex;
+    align-items: center;
+}
+
+.downloadIn{
+    display:flex;
+    gap:116px;
+    align-items: flex-start;
+}
+
+.downloadTitle{
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    color: var(--white);
+}
+
+.downloadEls{
+    flex:0 0 912px;
+    display:flex;
+    gap:16px;
+}
+
+.downloadEl{
+    flex:0 0 216px;
+    display:flex;
+    flex-direction: column;
+}
+
+.downloadElTitle{
+    min-height:180px;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--white);
+    padding:26px;
+    border-radius: 12px 12px 0px 0px;
+    background-color: var(--dark);
+}
+
+.downloadEl:nth-child(1) .downloadElTitle{
+    background-image: url(../media/img/dwnF.png);
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.downloadEl:nth-child(1) .downloadElTitle::before{
+    content:'';
+    width:32px;
+    height:32px;
+    background-image: url(../media/img/dwnScada.svg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.downloadEl:nth-child(2) .downloadElTitle::before{
+    content:'';
+    width:32px;
+    height:32px;
+    background-image: url(../media/img/doc.svg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.downloadEl:nth-child(3) .downloadElTitle::before{
+    content:'';
+    width:32px;
+    height:32px;
+    background-image: url(../media/img/docPrice.svg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.downloadEl:nth-child(4) .downloadElTitle::before{
+    content:'';
+    width:32px;
+    height:32px;
+    background-image: url(../media/img/docScada.svg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.downloadElLink{
+    border-radius: 0 0 12px 12px;
+    padding: 20px;
+    height: 64px;
+    background: var(--main);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #1c1c1e;
+    transition:0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.downloadElLink:hover{
+    color:var(--white);
 }

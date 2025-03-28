@@ -758,4 +758,102 @@
     }
 
 
+    /********************************************************/
+
+    .feedback{
+        margin-top:160px;
+        display:flex;
+        gap:16px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .feedbackInfo{
+        gap:96px;
+        padding:16px 16px 32px 16px;
+        align-items:flex-start;
+    }
+
+
+    .feedbackInfoText{
+        max-width:332px;
+        padding-top:0px;
+        font-size: 16px;
+    }
+
+    .feedbackInfoStaffElText{
+        padding:6px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .feedbackInfoStaffElName{
+        font-size: 13px;
+    }
+
+    .feedbackInfoStaffElPosition{
+        font-size: 10px;
+    }
+
+    .feedbackForm{
+        flex:0 0 448px;
+        display:flex;
+        flex-direction: column;
+    }
+
+    .feedbackAgreement{
+        max-width:345px;
+        font-size: 13px;
+    }
+
+    /********************************/
+
+    .download{
+        margin-top:160px;
+        min-height:668px;
+        background-image: url(../media/img/downloadT.svg);
+        display:flex;
+        align-items: center;
+    }
+
+    .downloadIn{
+        display:flex;
+        gap:60px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .downloadTitle{
+        font-size: 30px;
+    }
+
+    .downloadEls{
+        flex:0 0 100%;
+        display:flex;
+        gap:8px;
+    }
+
+    .downloadEl{
+        flex:0 0 178px;
+        display:flex;
+        flex-direction: column;
+    }
+
+    .downloadElTitle{
+        min-height:153px;
+        gap:16px;
+        font-size: 13px;
+        padding:20px;
+    }
+
+    .downloadElLink{
+        height: 64px;
+        font-size: 13px;
+    }
+
+    .downloadElLink:hover{
+        color:var(--white);
+    }
+
 }

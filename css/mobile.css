@@ -816,5 +816,117 @@
     .newsTg i{
         right:20px;
     }
+
+    /********************************************************/
+
+    .feedback{
+        margin-top:100px;
+        display:flex;
+        gap:32px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .feedbackInfo{
+        gap:60px;
+        padding:16px 16px 32px 16px;
+        align-items:flex-start;
+        flex-direction: column;
+    }
+
+
+    .feedbackInfoText{
+        max-width:332px;
+        padding-top:0px;
+        font-size: 16px;
+    }
+
+    .feedbackInfoStaffElText{
+        padding:6px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .feedbackInfoStaffElName{
+        font-size: 13px;
+    }
+
+    .feedbackInfoStaffElPosition{
+        font-size: 10px;
+    }
+
+    .feedbackForm{
+        flex:0 0 448px;
+        display:flex;
+        flex-direction: column;
+    }
+
+    .feedbackAgreement{
+        font-size: 13px;
+    }
+
+    /********************************/
+
+    .download{
+        margin-top:100px;
+        min-height:0;
+        background-image: url(../media/img/downloadM.svg);
+        display:flex;
+        align-items: center;
+    }
+
+    .downloadIn{
+        display:flex;
+        gap:60px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .downloadTitle{
+        font-size: 30px;
+    }
+
+    .downloadEls{
+        flex:0 0 100%;
+        display:flex;
+        flex-wrap: wrap;
+        gap:16px;
+    }
+
+    .downloadEl{
+        flex:1 1 100%;
+        display:flex;
+        flex-direction: column;
+    } 
+    
+    .downloadEl:nth-child(2){
+        flex:1 1 40%;
+        display:flex;
+        flex-direction: column;
+    }  
+    
+    .downloadEl:nth-child(3){
+        flex:1 1 40%;
+        display:flex;
+        flex-direction: column;
+    }
+
+    .downloadElTitle{
+        min-height:0px;
+        gap:16px;
+        font-size: 13px;
+        padding:20px;
+    }
+
+    .downloadElLink{
+        height: 64px;
+        font-size: 13px;
+    }
+
+    .downloadElLink:hover{
+        color:var(--white);
+    }
+    
     
 }
