@@ -1559,3 +1559,20 @@ a{
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+/********************************************************/
+
+.feedback{
+    display:flex;
+    gap:16px;
+}
+
+.feedbackInfo{
+    border-radius: 12px;
+    background: var(--dark);
+    flex:1 1 100%;
+}
+
+.feedbackForm{
+    flex:0 0 448px;
+}
