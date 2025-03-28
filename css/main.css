@@ -28,6 +28,10 @@ body{
     display:none;
 }
 
+a{
+    color: var(--main);
+}
+
 .tablet{
     display:none;
 }
@@ -1429,4 +1433,129 @@ body{
     font-size: 16px;
     line-height: 120%;
     color: var(--white);
+}
+
+/**********************************************/
+
+.news{
+    display:flex;
+    gap:132px;
+}
+
+.newsText{
+    margin-top:20px;
+}
+
+.newsCol:nth-child(1){
+    flex:0 0 332px;
+}
+
+.newsCol:nth-child(2){
+   display:flex;
+   flex-direction: column;
+   gap:16px;
+   flex:1 1 auto;
+}
+
+.newsContent{
+    display:flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.newsEl{
+    display:flex;
+    align-items: flex-start;
+}
+
+.newsEl>img{
+    flex:0 0 332px;
+    border-radius: 12px;
+}
+
+.newsElBody{
+    display:flex;
+    flex-direction: column;
+    border-radius: 12px;
+    padding: 20px;
+    background: var(--dark);
+    gap:40px;
+    flex: 1 1 auto;
+}
+
+.newsElBodyTop{
+    display:flex;
+    gap:20px;
+    align-items: center;
+}
+
+.newsElTags{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.newsElDate{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 120%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--second);
+}
+
+.newsElTag{
+    border: 1px solid var(--second);
+    border-radius: 11px;
+    padding: 4px 6px 3px 6px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 120%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--second);
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.newsElTag:hover{
+    background-color: var(--white);
+}
+
+.newsElText{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--white);
+}
+
+.newsTg{
+    height:200px;
+    display:flex;
+    align-items:flex-end;
+    position:relative;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--main);
+    border: 1px solid var(--main);
+    border-radius: 12px;
+    padding:20px;
+}
+
+.newsTg i{
+    content:"";
+    width:18px;
+    height:34px;
+    position:absolute;
+    right:20px;
+    top:50%;
+    margin-top:-17px;
+    background-image: url(../media/img/arrowRight.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
