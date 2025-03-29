@@ -221,9 +221,16 @@ a{
     color:var(--white);
 }
 
+.platformSocOb{
+    position:fixed;
+    bottom:50px;
+    display:flex;
+    justify-content: center;
+    width:100%;
+}
+
 .platformSoc{
     position:relative;
-    margin-top:40px;
     display:flex;
     gap:28px;
     background: #2f3235;
