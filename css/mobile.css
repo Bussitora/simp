@@ -569,6 +569,11 @@
     }
 
     /***********************/
+
+    .footer{
+        margin-top: 100px;
+    }
+
     .footerIn{
         height:216px;
         display:flex;
