@@ -1056,7 +1056,8 @@ a{
 }
 
 .astraBotEl:nth-child(1)::before{
-    left:249px;
+    left:50%;
+    margin-left:10px;
     bottom:-32px;
     content:'';
     position:absolute;
@@ -1071,7 +1072,8 @@ a{
 .astraBotEl:nth-child(1)::after{
     content:'';
     position:absolute;
-    right:249px;
+    right:50%;
+    margin-right:10px;
     bottom:-32px;
     width:16px;
     height:24px;

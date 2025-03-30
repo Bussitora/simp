@@ -516,11 +516,12 @@
     }
 
     .astraBotElsIn{
-        gap:8px;
+        /*gap:8px;*/
     }
 
     .astraBotEl{
-        width: 288px;
+        /*width: 288px;*/
+        width: 272px;
         height: 116px;
         padding:16px;
         font-size: 16px;
@@ -529,19 +530,19 @@
     }
 
     .astraBotEl:nth-child(1)::before{
-        display:none;
+        /*display:none;*/
     }
 
     .astraBotEl:nth-child(1)::after{
-        display:none;
+       /* display:none;*/
     }
 
     .astraBotEl:nth-child(2)::before{
-        display:none;
+       /* display:none;*/
     }
 
     .astraBotEl:nth-child(4)::before{
-        display:none;
+       /* display:none;*/
     }
 
     .astraBotReserv{
