@@ -809,6 +809,7 @@
     .feedbackAgreement{
         max-width:345px;
         font-size: 13px;
+        align-self:center;
     }
 
     /********************************/
