@@ -1,4 +1,9 @@
 @media (min-width:0px) and (max-width:767px){
+
+    .fullpage{
+        gap:100px;
+    }
+
     .mobile{
         display:block;
     }
@@ -77,10 +82,12 @@
 
     .futureTop{
         top:0;
+        position:static;
     }
+
     .future{
-        padding-top:140px;
-        margin-top:100px;
+        /*padding-top:140px;*/
+        /*margin-top:100px;*/
     }
 
     .futureBotCol span{
@@ -116,7 +123,7 @@
         display:flex;
         gap:60px;
         flex-direction: column;
-        margin-top:100px;
+        /*margin-top:100px;*/
     }
     
     .functionsCol{
@@ -150,7 +157,7 @@
     /*************************/
 
     .fastClear{
-        margin-top:100px;
+        /*margin-top:100px;*/
     }
 
     .fastClearColTop{
@@ -259,7 +266,7 @@
     /*********************************/
 
     .arch{
-        margin-top:100px;
+        /*margin-top:100px;*/
         gap:40px;
     }
 
@@ -318,7 +325,7 @@
 
     .driver{
         gap:60px;
-        margin-top:100px;
+        /*margin-top:100px;*/
     }
 
     .driverCol:nth-child(1){
@@ -375,7 +382,7 @@
     /***************************/
 
     .lua{
-        margin-top:100px;
+        /*margin-top:100px;*/
         gap:32px;
         padding:16px;
         background-image: url("../media/img/luaBgM.png");
@@ -416,7 +423,7 @@
     /************************************/
 
     .storage{
-        margin-top:100px;
+        /*margin-top:100px;*/
     }
 
     .storageTop{
@@ -478,7 +485,7 @@
     /************************************************/
 
     .astra{
-        margin-top:100px;
+        /*margin-top:100px;*/
         gap:60px;
         padding:16px;
         background-image: url("../media/img/linuxBgM.png");
@@ -526,36 +533,40 @@
     }
 
     .astraBotElsIn{
-        gap:8px;
+        gap:40px;
+    }
+
+    .astraBotEls{
+        gap:16px;
     }
 
     .astraBotEl{
-        width: 116px;
-        height: 116px;
-        padding:16px;
+        width: 93px;
+        height: 144px;
+        padding:8px;
         font-size: 13px;
-        background: var(--dark);
-        border:none;
+        /*background: var(--dark);*/
+        /*border:none;*/
     }
 
     .astraBotEl:nth-child(1)::before{
-        display:none;
+        /*display:none;*/
     }
 
     .astraBotEl:nth-child(1)::after{
-        display:none;
+        /*display:none;*/
     }
 
     .astraBotEl:nth-child(2)::before{
-        display:none;
+        /*display:none;*/
     }
 
     .astraBotEl:nth-child(4)::before{
-        display:none;
+        /*display:none;*/
     }
 
     .astraBotReserv{
-        left: -40px;
+        left: -44px;
         top: 50%;
         margin-top:-36px;
         font-size: 13px;
@@ -569,12 +580,44 @@
     /***********************/
 
     .footer{
-        margin-top: 100px;
+        /*margin-top: 100px;*/
     }
 
     .footerIn{
-        height:216px;
+        /*height:216px;*/
+        /*display:flex;*/
+        padding-bottom:25px;
+    }
+
+    .footerBot{
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .footerBotLogo{
+        font-family: var(--third-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: -0.03em;
+        color: var(--main);
         display:flex;
+        gap:6px;
+        align-items: center;
+    }
+    
+    .footerBotLogo::before{
+        content:"";
+        width:13px;
+        height:15px;
+        background:url("../media/img/logo.svg");
+        background-size:contain;
+        background-repeat:no-repeat;
+        background-position: center center;
+    }
+
+    .footerTopLogo{
+        display:none;
     }
 
     .footerTop{
@@ -617,7 +660,7 @@
     /************************************/
 
     .kasp{
-        margin-top:100px;
+        /*margin-top:100px;*/
         gap:0;
     }
 
@@ -715,7 +758,7 @@
     /*********************************/
 
     .distr{
-        margin-top: 100px;
+        /*margin-top: 100px;*/
         gap:60px;
     }
 
@@ -755,7 +798,7 @@
     /**********************************************/
 
     .news{
-        margin-top:100px;
+        /*margin-top:100px;*/
         display:flex;
         flex-direction: column;
         gap:60px;
@@ -823,7 +866,7 @@
     /********************************************************/
 
     .feedback{
-        margin-top:100px;
+        /*margin-top:100px;*/
         display:flex;
         gap:32px;
         flex-direction: column;
@@ -860,7 +903,7 @@
     }
 
     .feedbackForm{
-        flex:0 0 448px;
+        flex:0 0 auto;
         display:flex;
         flex-direction: column;
     }
@@ -872,7 +915,7 @@
     /********************************/
 
     .download{
-        margin-top:100px;
+        /*margin-top:100px;*/
         min-height:0;
         background-image: url(../media/img/downloadM.svg);
         display:flex;

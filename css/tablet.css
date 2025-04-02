@@ -1,5 +1,8 @@
 @media (min-width:768px) and (max-width:1439px){
 
+    .fullpage{
+        gap:160px;
+    }
 
     .container {
         max-width: 768px;
@@ -28,6 +31,10 @@
     .platformContent{
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .platformContentMediaPic{
+        max-width: 479px;
     }
 
     .platformContentText{
@@ -79,11 +86,11 @@
 
 
     .futureTop{
-        top:0;
+       position: static;
     }
     .future{
         padding-top:0;
-        margin-top:160px;
+        /*margin-top:160px;*/
     }
 
     .futureTopText{
@@ -109,7 +116,7 @@
     }
 
     .futureBot{
-        min-height:913px;
+        min-height:759px;
         flex-direction: column;
         gap:366px;
         background-image: url(../media/img/blueDotsT.svg);
@@ -126,7 +133,7 @@
         display:flex;
         gap:70px;
         flex-direction: column;
-        margin-top:160px;
+        /*margin-top:160px;*/
     }
     
     .functionsCol{
@@ -162,7 +169,7 @@
     /*************************/
 
     .fastClear{
-        margin-top:160px;
+        /*margin-top:160px;*/
     }
 
     .fastClearText{
@@ -274,7 +281,7 @@
     /*********************************/
 
     .arch{
-        margin-top:160px;
+        /*margin-top:160px;*/
         gap:60px;
     }
 
@@ -328,7 +335,7 @@
 
     .driver{
         gap:60px;
-        margin-top:160px;
+        /*margin-top:160px;*/
     }
 
     .driverCol:nth-child(1){
@@ -377,7 +384,7 @@
     /***************************/
 
     .lua{
-        margin-top:160px;
+        /*margin-top:160px;*/
         gap:110px;
         background-image: url("../media/img/luaBgT.png");
     }
@@ -413,7 +420,7 @@
     /************************************/
 
     .storage{
-        margin-top:160px;
+        /*margin-top:160px;*/
     }
 
     .storageTop{
@@ -470,7 +477,7 @@
     /************************************************/
 
     .astra{
-        margin-top:160px;
+        /*margin-top:160px;*/
         gap:60px;
         background-image: url("../media/img/linuxBgT.png");
     }
@@ -525,8 +532,8 @@
         height: 116px;
         padding:16px;
         font-size: 16px;
-        background: var(--dark);
-        border:none;
+        /*background: var(--dark);*/
+        /*border:none;*/
     }
 
     .astraBotEl:nth-child(1)::before{
@@ -560,11 +567,12 @@
     /**************************************************/
 
     .footer{
-        margin-top: 160px;
+       /*margin-top: 160px;*/
     }
 
     .footerIn{
-        height:173px;
+        /*height:173px;*/
+        gap:57px;
     }
 
     .footerTop{
@@ -587,7 +595,7 @@
     /************************************/
 
     .kasp{
-        margin-top:160px;
+        /*margin-top:160px;*/
     }
 
     .kaspTop{
@@ -663,7 +671,7 @@
     /*********************************/
 
     .distr{
-        margin-top: 160px;
+        /*margin-top: 160px;*/
         gap:60px;
     }
 
@@ -701,7 +709,7 @@
     /**********************************************/
 
     .news{
-        margin-top:160px;
+        /*margin-top:160px;*/
         display:flex;
         flex-direction: column;
         gap:60px;
@@ -766,7 +774,7 @@
     /********************************************************/
 
     .feedback{
-        margin-top:160px;
+        /*margin-top:160px;*/
         display:flex;
         gap:16px;
         flex-direction: column;
@@ -816,7 +824,7 @@
     /********************************/
 
     .download{
-        margin-top:160px;
+        /*margin-top:160px;*/
         min-height:668px;
         background-image: url(../media/img/downloadT.svg);
         display:flex;

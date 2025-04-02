@@ -7,18 +7,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="css/fullpage.min.css" rel="stylesheet">
+    <link href="css/fullpage.min.css" rel="stylesheet">   
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/hover-min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/desktop.css" rel="stylesheet">
     <link href="css/tablet.css" rel="stylesheet">
     <link href="css/mobile.css" rel="stylesheet">
+    <link href="css/float-label.css" rel="stylesheet">
     <script type="text/javascript" src="js/fullpage.min.js"></script>
+    <script type="text/javascript" src="js/imask.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
-    <div id="fullpage">       
+    <div id="fullpage" class="fullpage">       
         <div class="slide section">
             <div class="container">
                 <div class="head">
@@ -71,7 +73,7 @@
                                     <img class="mobile" src="media/img/platformM.png">-->
                                 </div>
                             </div>
-                            <a href="#" class="platformContentMediaBtn">Скачать Симплайт 5</a>
+                            <a href="#" class="platformContentMediaBtn btn">Скачать Симплайт 5</a>
                         </div>
                     </div>
                 </div>
@@ -148,7 +150,7 @@
                         </div>
                         <div class="fastClearColBot">
                             <div class="fastClearCons">Записаться на консультацию</div>
-                            <a href="#" class="fastClearTg">Заполнить форму</a>
+                            <a href="#" class="fastClearTg btn">Заполнить форму</a>
                         </div>                       
                     </div>
                     <div class="fastClearCol">
@@ -228,7 +230,7 @@
                     <div class="driverCol">
                         <div class="driverForm">
                             <div class="driverCons">Подписаться на Телеграм канал </div>
-                            <a href="#" class="driverTg">В Телеграм</a>
+                            <a href="#" class="driverTg btn">В Телеграм</a>
                         </div>   
                         <div class="driverEls">    
                             <div class="driverEl">MODBUS</div>  
@@ -288,7 +290,7 @@
                     <div class="storageBot">
                         <div class="storagePresentation">
                             <div class="storageBotPresentationTop">Презентация о системе Симплайт 5 в PDF</div>
-                            <a href="#" class="storageBotPresentationBot">Скачать</a>
+                            <a href="#" class="storageBotPresentationBot btn">Скачать</a>
                         </div>
                         <div class="storageEls">
                             <div class="storageEl">
@@ -529,19 +531,19 @@
                    </div>
                    <div class="feedbackForm">
                         <form>
-                            <div class="feedbackFormEl">
-                                <label>Имя</label>
-                                <input type="text" />
+                            <div class="feedbackFormEl has-float-label">                                
+                                <input placeholder="" id="name" type="text" />
+                                <label for="name">Имя</label>
                             </div>  
-                            <div class="feedbackFormEl">
-                                <label>Телефон</label>
-                                <input type="text" />
+                            <div class="feedbackFormEl has-float-label">                                
+                                <input placeholder="" id="phone-mask" type="text" />
+                                <label for="phone-mask">Телефон</label>
                             </div>
-                            <div class="feedbackFormEl required">
-                                <label>Эл.Почта</label>
-                                <input required type="email" />
+                            <div class="feedbackFormEl required has-float-label">                                
+                                <input placeholder="" id="email" required type="email" />
+                                <label for="email">Эл.Почта</label>
                             </div>
-                            <input class="feedbackFormSubmit" type="submit" value="Отправить" />
+                            <input class="feedbackFormSubmit btn" type="submit" value="Отправить" />
                         </form>
                         <div class="feedbackAgreement">
                             Нажимая кнопку «отправить», я даю согласие на обработку моих персональных данных в соответствии с <a href="#">Политикой конфеденциальности</a>
@@ -558,19 +560,19 @@
                         <div class="downloadEls">
                             <div class="downloadEl">
                                 <div class="downloadElTitle">Полнофункциональная версия системы для ознакомления. Windows и Linux</div>
-                                <a href="#" class="downloadElLink">Скачать Симплайт 5</a>
+                                <a href="#" class="downloadElLink btn">Скачать Симплайт 5</a>
                             </div> 
                             <div class="downloadEl">
                                 <div class="downloadElTitle">Презентация о системе Симплайт 5 в PDF</div>
-                                <a href="#" class="downloadElLink">Скачать</a>
+                                <a href="#" class="downloadElLink btn">Скачать</a>
                             </div> 
                             <div class="downloadEl">
                                 <div class="downloadElTitle">Прайс на лицензии Симплайт 5</div>
-                                <a href="#" class="downloadElLink">Скачать прайс</a>
+                                <a href="#" class="downloadElLink btn">Скачать прайс</a>
                             </div>   
                             <div class="downloadEl">
                                 <div class="downloadElTitle">Маркетинговые материалы </div>
-                                <a href="#" class="downloadElLink">Скачать архив</a>
+                                <a href="#" class="downloadElLink btn">Скачать архив</a>
                             </div>
                         </div>
                     </div>
@@ -591,8 +593,12 @@
                                     <a href=""#"">WH</a>
                                     <a href=""#"">2GIS</a>
                                 </div>
-                                <div class="footerTopContactPhone">+7 343 247-21-33</div>
+                                <a href="tel:+73432472133" class="footerTopContactPhone">+7 343 247-21-33</a>
                             </div>
+                        </div>
+                        <div class="footerBot">
+                            <a href="#" class="footerBotLogo">Симплайт</a>
+                            <a target="_blank" href="https://www.manfactory.ru/" class="footerBotCopy">MAN-FACTORY</a>
                         </div>
                     </div>
                 </div>
@@ -603,10 +609,10 @@
         <div class="platformSoc">
             <div class="platformSocLogo"></div>
             <div class="platformSocMenu">
-                <a class="hvr-sink" href="#">Телеграм</a>
-                <a class="hvr-sink" href="#">ВК</a>
-                <a class="hvr-sink" href="#">Рутуб</a>
-                <a class="hvr-sink" href="#">Ютуб</a>    
+                <a class="white" href="#">Телеграм</a>
+                <a class="white" href="#">ВК</a>
+                <a class="white" href="#">Рутуб</a>
+                <a class="white" href="#">Ютуб</a>    
             </div>
         </div>
     </div>

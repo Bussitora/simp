@@ -1,5 +1,6 @@
 :root {
 	--main: #1995fc;
+    --main-hover: #0060d4;
 	--white: #fff;
 	--500-white: rgba(255, 255, 255, 0.5);
 	--second: #7c7f7d;
@@ -29,7 +30,37 @@ body{
 }
 
 a{
+    transition: color 0.2s linear;
     color: var(--main);
+}
+
+a:hover{
+    color: var(--main-hover);
+}
+
+a.white{
+    color: var(--white);
+}
+
+a.white:hover{
+    color: #8c8c8c;
+}
+
+.btn, a.btn, input[type="submit"].btn{
+    transition: background 0.2s;
+    background: var(--main);
+    color: #1c1c1e;
+}
+
+.btn:hover, a.btn:hover, input[type="submit"].btn:hover{
+    background: var(--main-hover);
+    color: #1c1c1e;
+}
+
+.fullpage{
+    display:flex;
+    flex-direction: column;
+    gap:220px;
 }
 
 .video-wrapper {
@@ -217,6 +248,9 @@ a{
 
 .platformContentMediaPic{
     margin-top:40px;
+    max-width: 617px;
+    align-self: center;
+    width: 100%;
 }
 
 .platformContentMediaBtn{   
@@ -290,7 +324,7 @@ a{
 }
 
 .future{
-    margin-top:50px;
+    /*margin-top:50px;*/
     position:relative;
     padding-top:72px;
 }
@@ -1161,6 +1195,7 @@ a{
 }
 
 .astraBotElsBot::after{
+    display:none;
     content:'';
     width:89px;
     height:34px;
@@ -1174,14 +1209,17 @@ a{
 
 
 .footerIn{
-    height:226px;
-    padding:20px;
+    /*height:226px;*/
+    padding:0 0 32px 0;
+    display: flex;
+    gap:86px;
+    flex-direction: column;
 }
 
 .footerTop{
     display:flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .footerTopLogo{
@@ -1218,6 +1256,7 @@ a{
     display:flex;
     flex-direction:column;
     gap:24px;
+    align-items: flex-end;
 }
 
 .footerTopContactSoc{
@@ -1230,6 +1269,24 @@ a{
     font-weight: 400;
     font-size: 30px;
     line-height: 100%;
+}
+
+.footerBot{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footerBotLogo{
+    display:none;
+}
+
+.footerBotCopy{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 100%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     color: var(--main);
 }
 
@@ -1695,7 +1752,9 @@ a{
     margin-top:0px;
 }
 
+
 .feedbackFormEl>label{
+    /*
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 6px;
@@ -1706,6 +1765,7 @@ a{
     position:absolute;
     top:23px;
     left:16px;
+    */
 }
 
 .feedbackFormEl>input[type='text'],.feedbackFormEl>input[type='email']{
@@ -1723,7 +1783,6 @@ a{
 input[type="submit"].feedbackFormSubmit{
     padding: 20px;
     height: 64px;
-    background: var(--main);
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 16px;
@@ -1732,9 +1791,6 @@ input[type="submit"].feedbackFormSubmit{
     text-align: center;
     color: #1c1c1e;
     transition:0.2s;
-}
-input[type="submit"].feedbackFormSubmit:hover{
-    color:var(--white);
 }
 
 .feedbackFormEl.required::after{
