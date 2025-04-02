@@ -547,6 +547,7 @@
         font-size: 13px;
         /*background: var(--dark);*/
         /*border:none;*/
+        gap:16px;
     }
 
     .astraBotEl:nth-child(1)::before{
@@ -568,7 +569,7 @@
     .astraBotReserv{
         left: -44px;
         top: 50%;
-        margin-top:-36px;
+        margin-top:-48px;
         font-size: 13px;
 
     }

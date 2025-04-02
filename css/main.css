@@ -1107,6 +1107,8 @@ a.white:hover{
     line-height: 120%;
     color: var(--main);
     position:relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .astraBotEl:nth-child(1)::before{
