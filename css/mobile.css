@@ -920,6 +920,7 @@
         background-image: url(../media/img/downloadM.svg);
         display:flex;
         align-items: center;
+        padding-top: 22px;
     }
 
     .downloadIn{
