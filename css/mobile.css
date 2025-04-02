@@ -875,7 +875,7 @@
 
     .feedbackInfo{
         gap:60px;
-        padding:16px 16px 32px 16px;
+        padding:16px 16px 16px 16px;
         align-items:flex-start;
         flex-direction: column;
     }
