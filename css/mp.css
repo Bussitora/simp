@@ -1,0 +1,274 @@
+.fp-slides{
+    width:100%;
+}
+
+#fullpage.disabled {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.fp-slidesContainer{
+    width:100% !important;
+}
+
+.slide:nth-child(1) {
+    padding-top: 0px;
+}
+
+.slide-preview {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 240px;
+    padding: 0 15px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.preview-carousel {
+    width: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    gap: 60px; 
+    padding: 0;
+}
+
+.preview-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 200px;
+    min-height: 240px; 
+    padding: 0 16px;
+    cursor: pointer;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+    pointer-events: auto;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.preview-item.active {
+    opacity: 1;
+    background: #d0e7ff;
+}
+
+.preview-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 14px;
+    flex-shrink: 0;
+}
+
+.preview-item > div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Спейсеры для центрирования крайних элементов */
+.preview-spacer {
+    width: 100%;
+    height: 100vh;
+    flex-shrink: 0;
+    pointer-events: none;
+}
+
+
+.section {
+    text-align: center;
+    font-size: 2.5em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    color: white;
+}
+
+#section2 .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease-in-out;
+    align-items: center;
+    justify-content: center;
+}
+
+#section2 .slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (max-width: 1439px) {
+    
+    .fp-slidesContainer{
+        width:100% !important;
+        transform: translate3d(0px, 0px, 0px) !important;
+    }
+
+    /* Слайды внутри секции 2 становятся вертикальными блоками */
+    #section2 .slide {
+        height: auto !important;
+        width: 100% !important;
+        padding: 40px 20px;
+        box-sizing: border-box;
+        flex-direction: column;
+        min-height: 30vh;
+        background: inherit;
+        scroll-snap-align: start;
+        position: relative;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transition: none;
+    }
+
+    /* Превью скрывается */
+    .slide-preview {
+        display: none !important;
+    }
+
+    /* Разрешаем естественную прокрутку */
+    #fullpage {
+        height: auto !important;
+        overflow: visible;
+    }
+
+    .section {
+        height: auto !important;
+    }
+}
+
+#fp_welcome {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.1s;
+}
+
+.fp_welcome_in{
+    position:relative;
+    width:1151px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fp_welcome.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.fp_welcome_circle{
+    width:320px;
+    height:332px;
+    background:url("../media/img/mp/mp_1_2.svg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+    margin-top:-8px;
+    position:absolute;
+    animation-name: fpWelcomeCircle;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode:forwards;
+}
+
+.fp_welcome_arr{
+    width:563px;
+    height:52px;
+    background:url("../media/img/mp/mp_3.svg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+    animation-name: fpWelcomeArr;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+.fp_welcome_cursor{
+    width:187px;
+    height:261px;
+    background:url("../media/img/mp/mp_2.svg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+    position:absolute;
+    animation-name: fpWelcomeCursor;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes fpWelcomeCircle {
+    from {
+        opacity: 1;
+        transform:rotate(0deg);
+        left:50%;
+        margin-left:-160px;
+    }
+    to {
+        opacity: 1;
+        transform:rotate(-30deg);
+        left:-30px;
+        margin-left:0px;
+    }
+}
+
+@keyframes fpWelcomeArr {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fpWelcomeCursor {
+    from {
+        opacity: 0;
+        right:50px;
+    }
+    to {
+        opacity: 1;
+        right:30px;
+    }
+}
