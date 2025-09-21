@@ -9,19 +9,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js@4.0.23/dist/fullpage.min.css" />
 
     <style>
-        .slide-preview {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 220px;
-            background: rgba(255,255,255,0.95);
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            z-index: 100;
-        }
-
         .fp-slides{
             width:100%;
         }
@@ -30,35 +17,80 @@
             width:100% !important;
         }
 
+        .slide-preview {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            width: 240px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 0 15px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            pointer-events: none;
+        }
+
+        .preview-carousel {
+            width: 100%;
+            overflow-y: auto;
+            scrollbar-width: none;
+            display: flex;
+            flex-direction: column;
+            gap: 60px; /* ✅ Между элементами — 60px */
+            padding: 0; /* Убрали padding — используем спейсеры */
+        }
+
+        .preview-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
         .preview-item {
             display: flex;
             align-items: center;
-            margin-bottom: 12px;
-            padding: 10px;
-            border-radius: 8px;
+            width: 100%;
+            max-width: 200px;
+            min-height: 240px; 
+            padding: 0 16px;
             cursor: pointer;
-            transition: all 0.2s ease;
-            background: #fafafa;
-        }
-
-        .preview-item:hover {
-            background: #e8f4ff;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+            opacity: 0.5;
+            pointer-events: auto;
+            flex-shrink: 0;
+            box-sizing: border-box;
+            border: 2px solid black;
+            margin: 0;
         }
 
         .preview-item.active {
+            opacity: 1;
             background: #d0e7ff;
-            font-weight: bold;
-            border-left: 4px solid #2196F3;
         }
 
         .preview-item img {
             width: 50px;
             height: 50px;
             object-fit: cover;
-            border-radius: 6px;
-            margin-right: 12px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            margin-right: 14px;
+            flex-shrink: 0;
         }
+
+        .preview-item > div {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Спейсеры для центрирования крайних элементов */
+        .preview-spacer {
+            width: 100%;
+            height: 100vh; /* ✅ "Воздух" сверху и снизу */
+            flex-shrink: 0;
+            pointer-events: none;
+        }
+
 
         .section {
             text-align: center;
@@ -163,27 +195,31 @@
         <div class="slide">Вложенный слайд 4</div>
         <div class="slide">Вложенный слайд 5</div>
 
-        <!-- Превью справа -->
+        <!-- Превью справа — вертикальная карусель -->
         <div class="slide-preview">
-            <div class="preview-item active" data-index="0">
-                <img src="https://picsum.photos/50/50?random=1" alt="Slide 1">
-                <div>Тема 1</div>
-            </div>
-            <div class="preview-item" data-index="1">
-                <img src="https://picsum.photos/50/50?random=2" alt="Slide 2">
-                <div>Тема 2</div>
-            </div>
-            <div class="preview-item" data-index="2">
-                <img src="https://picsum.photos/50/50?random=3" alt="Slide 3">
-                <div>Тема 3</div>
-            </div>
-            <div class="preview-item" data-index="3">
-                <img src="https://picsum.photos/50/50?random=4" alt="Slide 4">
-                <div>Тема 4</div>
-            </div>
-            <div class="preview-item" data-index="4">
-                <img src="https://picsum.photos/50/50?random=5" alt="Slide 5">
-                <div>Тема 5</div>
+            <div class="preview-carousel">
+                <div class="preview-spacer"></div> <!-- ✅ Пустой элемент снизу -->
+                <div class="preview-item active" data-index="0">
+                    <img src="https://picsum.photos/50/50?random=1" alt="Slide 1">
+                    <div>Тема 1</div>
+                </div>
+                <div class="preview-item" data-index="1">
+                    <img src="https://picsum.photos/50/50?random=2" alt="Slide 2">
+                    <div>Тема 2</div>
+                </div>
+                <div class="preview-item" data-index="2">
+                    <img src="https://picsum.photos/50/50?random=3" alt="Slide 3">
+                    <div>Тема 3</div>
+                </div>
+                <div class="preview-item" data-index="3">
+                    <img src="https://picsum.photos/50/50?random=4" alt="Slide 4">
+                    <div>Тема 4</div>
+                </div>
+                <div class="preview-item" data-index="4">
+                    <img src="https://picsum.photos/50/50?random=5" alt="Slide 5">
+                    <div>Тема 5</div>
+                </div>
+                <div class="preview-spacer"></div> <!-- ✅ Пустой элемент снизу -->
             </div>
         </div>
     </div>
@@ -319,24 +355,37 @@
         }
 
         function activatePreviewForSlide(slideIndex) {
-            if (mediaQuery.matches) return; // ✅ Игнорируем в адаптиве
+            if (mediaQuery.matches) return;
 
             const slides = document.querySelectorAll('#section2 .slide');
             const previewItems = document.querySelectorAll('.preview-item');
+            const carousel = document.querySelector('.preview-carousel');
 
             // Скрываем все слайды
             slides.forEach(slide => slide.classList.remove('active'));
-            // Показываем нужный
             if (slides[slideIndex]) {
                 slides[slideIndex].classList.add('active');
             }
 
-            // Обновляем активный элемент превью
+            // Снимаем активность со всех превью
             previewItems.forEach(el => el.classList.remove('active'));
             if (previewItems[slideIndex]) {
                 previewItems[slideIndex].classList.add('active');
-            }
 
+                // ✅ Плавный скролл без дергания — вручную через scrollTop
+                setTimeout(() => {
+                    const element = previewItems[slideIndex];
+                    const container = carousel;
+                    if (element && container) {
+                        const elementTop = element.offsetTop;
+                        const elementHeight = element.offsetHeight;
+                        const containerHeight = container.clientHeight;
+
+                        // Центрируем элемент
+                        container.scrollTop = elementTop - (containerHeight / 2) + (elementHeight / 2);
+                    }
+                }, 50);
+            }
         }
         
         mediaQuery.addEventListener('change', function(e) {
