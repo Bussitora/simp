@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // ✅ Все вспомогательные функции
         let lastActiveSlideIndexInSection2 = 0;
         let isScrolling = false;
+        let isIntermediateStateActive = false; // ✅ Флаг промежуточного состояния
         const throttleDelay = 800;
 
         function getSectionIndex(sectionObj) {
@@ -103,6 +104,64 @@ document.addEventListener('DOMContentLoaded', function () {
 
             newIndex = Math.max(0, Math.min(newIndex, totalSlides - 1));
 
+            // ✅ Промежуточное состояние при первом скролле с 0 на 1
+            if (currentSlideIndex === 0 && newIndex === 1 && !isIntermediateStateActive) {
+                event.preventDefault();
+                event.stopPropagation();
+
+                isScrolling = true;
+                isIntermediateStateActive = true;
+
+                const carousel = document.querySelector('.preview-carousel');
+                const previewItems = document.querySelectorAll('.preview-item');
+                const slide1 = document.querySelectorAll('#section2 .slide')[0];
+
+                if (!carousel || !previewItems[0] || !previewItems[1] || !slide1) {
+                    isScrolling = false;
+                    isIntermediateStateActive = false;
+                    return;
+                }
+
+                // ✅ Плавно скроллим карусель на полпути между 1 и 2 элементом
+                const item1 = previewItems[0];
+                const item2 = previewItems[1];
+                const halfway = (item1.offsetTop + item2.offsetTop) / 2;
+                const containerHeight = carousel.clientHeight;
+                const targetScrollTop = halfway - (containerHeight / 2) + (item1.offsetHeight / 2);
+
+                smoothScrollToPosition(carousel, targetScrollTop, 500);
+
+                // ✅ Добавляем класс анимации к слайду 1
+                slide1.classList.remove('slide-1-animation');
+                void slide1.offsetWidth;
+                slide1.classList.add('slide-1-animation');
+
+                setTimeout(() => {
+                    isScrolling = false;
+                }, throttleDelay);
+
+                return;
+            }
+
+            // ✅ Завершение перехода при повторном скролле
+            if (currentSlideIndex === 0 && newIndex === 1 && isIntermediateStateActive) {
+                event.preventDefault();
+                event.stopPropagation();
+
+                isScrolling = true;
+                isIntermediateStateActive = false;
+
+                activatePreviewForSlide(1);
+                fullpageInstance.moveTo(2, 1);
+
+                setTimeout(() => {
+                    isScrolling = false;
+                }, throttleDelay);
+
+                return;
+            }
+
+            // ❗️ Обычное поведение для всех остальных переходов
             if (newIndex === currentSlideIndex) {
                 return;
             }
@@ -145,6 +204,32 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             requestAnimationFrame(animateScroll);
+        }
+
+        function smoothScrollToPosition(container, targetScrollTop, duration = 500) {
+            return new Promise(resolve => {
+                const startScrollTop = container.scrollTop;
+                const startTime = performance.now();
+
+                function animateScroll(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+
+                    const ease = progress < 0.5
+                        ? 2 * progress * progress
+                        : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+                    container.scrollTop = startScrollTop + (targetScrollTop - startScrollTop) * ease;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(animateScroll);
+                    } else {
+                        resolve();
+                    }
+                }
+
+                requestAnimationFrame(animateScroll);
+            });
         }
 
         function activatePreviewForSlide(slideIndex) {

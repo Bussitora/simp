@@ -1,3 +1,20 @@
+.slide-1-animation {
+    animation: slide1Effect 1s ease-in-out forwards;
+}
+
+@keyframes slide1Effect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
 .fp-slides{
     width:100%;
 }
