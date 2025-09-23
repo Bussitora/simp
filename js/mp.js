@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         attachWheelHandler();
                     }
                 } else {
+                    isIntermediateStateActive = false;
                     removeWheelHandler();
                 }
             },
@@ -269,6 +270,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.preview-item').forEach(item => {
             item.addEventListener('click', function () {
                 if (mediaQuery.matches) return;
+                isIntermediateStateActive = false;
                 const index = parseInt(this.getAttribute('data-index'));
                 activatePreviewForSlide(index);
                 fullpageInstance.moveTo(2, index);
