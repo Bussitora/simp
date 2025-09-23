@@ -14,13 +14,18 @@ document.addEventListener('DOMContentLoaded', function () {
             licenseKey: 'OPEN_SOURCE_GPLV3_LICENSE',
             navigation: false,
             controlArrows: false,
-            scrollingSpeed: 700,
             responsiveWidth: 1440,
+            scrollingSpeed: 500,
             scrolling: false, // ❗️ Блокируем скролл до конца анимации
 
             afterLoad: function (origin, destination, direction) {
                 const sectionIndex = getSectionIndex(destination);
+                document.querySelectorAll('.section').forEach(sec => {
+                    sec.classList.remove('active-section');
+                });
 
+                // Показываем текущую
+                destination.item.classList.add('active-section');
                 if (sectionIndex === 1) {
                     activatePreviewForSlide(lastActiveSlideIndexInSection2);
                     if (!mediaQuery.matches) {
@@ -115,6 +120,33 @@ document.addEventListener('DOMContentLoaded', function () {
             event.stopPropagation();
         }
 
+        function smoothScrollTo(element, container, duration = 500) {
+            const elementTop = element.offsetTop;
+            const elementHeight = element.offsetHeight;
+            const containerHeight = container.clientHeight;
+            const targetScrollTop = elementTop - (containerHeight / 2) + (elementHeight / 2);
+            const startScrollTop = container.scrollTop;
+            const startTime = performance.now();
+
+            function animateScroll(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+
+                // Плавная функция easing (easeInOutQuad)
+                const ease = progress < 0.5
+                    ? 2 * progress * progress
+                    : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+                container.scrollTop = startScrollTop + (targetScrollTop - startScrollTop) * ease;
+
+                if (progress < 1) {
+                    requestAnimationFrame(animateScroll);
+                }
+            }
+
+            requestAnimationFrame(animateScroll);
+        }
+
         function activatePreviewForSlide(slideIndex) {
             if (mediaQuery.matches) return;
 
@@ -130,17 +162,11 @@ document.addEventListener('DOMContentLoaded', function () {
             previewItems.forEach(el => el.classList.remove('active'));
             if (previewItems[slideIndex]) {
                 previewItems[slideIndex].classList.add('active');
-
-                setTimeout(() => {
-                    const element = previewItems[slideIndex];
-                    const container = carousel;
-                    if (element && container) {
-                        const elementTop = element.offsetTop;
-                        const elementHeight = element.offsetHeight;
-                        const containerHeight = container.clientHeight;
-                        container.scrollTop = elementTop - (containerHeight / 2) + (elementHeight / 2);
-                    }
-                }, 50);
+                const element = previewItems[slideIndex];
+                const container = carousel;
+                if (element && container) {
+                    smoothScrollTo(element, container, 500); // ✅ Плавный скролл за 500 мс
+                }
             }
         }
 
@@ -170,7 +196,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // ✅ Инициализируем fullPage.js сразу при загрузке
     initFullPage();
 
     // ✅ Запускаем анимацию вступления
@@ -183,10 +208,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (fullpageInstance && fullpageInstance.setAllowScrolling) {
                     fullpageInstance.setAllowScrolling(true);
                     fullpageInstance.setKeyboardScrolling(true);
-                    fullpageInstance.moveTo(1); // Переходим на первую секцию
+                    fullpageInstance.moveTo(1);
                 }
-
-                // Показываем контент
                 fullpageContainer.classList.remove('disabled');
                 document.body.classList.remove('intro-active');
             }, FADE_DURATION);
