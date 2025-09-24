@@ -1,20 +1,3 @@
-.slide-1-animation {
-    animation: slide1Effect 1s ease-in-out forwards;
-}
-
-@keyframes slide1Effect {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-
 .fp-slides{
     width:100%;
 }
@@ -678,4 +661,93 @@
 
 #mp_product_cloud .mp_1_product_logo{
     background:url("../media/img/product_6.svg");
+}
+
+.fp_anim{
+    display:flex;
+    position:relative;
+    width:802px;
+    height:238px;
+    margin-top:32px;
+    margin: 0 auto;
+}
+
+.fp_anim_wheel{
+    width:200px;
+    height:194px;
+    background:url("../media/img/wheel.svg");
+    background-position:center center;
+    background-repeat:no-repeat;
+    position:absolute;
+    left:0;
+    top:50%;
+    margin-top:-75px;
+}
+
+.fp_anim_cursor{
+    width:143px;
+    height:205px;
+    background:url("../media/img/cursor.svg");
+    background-position:center center;
+    background-repeat:no-repeat;
+    position:absolute;
+    right:0;
+    top:50%;
+    margin-top:-86.5px;
+}
+
+.fp_anim_bryzg{
+    width:92px;
+    height:74px;
+    top:0;
+    right:83px;
+    background:url("../media/img/bryzg.svg");
+    background-position:center center;
+    background-repeat:no-repeat;
+    position:absolute;
+    opacity:0;
+    visibility:hidden;
+}
+
+.fp_anim_text{
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 100%;
+    color: var(--main);
+    width:403px;
+    opacity:1;
+    visibility:visible;    
+    position:absolute;
+    right:50%;
+    margin-right:-234px;
+    height:144px;
+    top:50%;
+    margin-top:-50px;
+}
+
+.slide-animation .fp_anim_text{    
+    visibility:hidden;
+    opacity:0;
+    margin-right:0px;
+    right:0;
+    transition:0.5s;
+}
+
+.slide-animation .fp_anim_bryzg{    
+    visibility:visible;
+    opacity:1;
+    right:310px;
+    transition:0.5s;
+}
+
+.slide-animation .fp_anim_cursor{    
+    margin-right:0px;
+    right:226px;
+    transition:0.5s;
+}
+
+.slide-animation .fp_anim_wheel{    
+    left:188px;
+    transition:0.5s;
 }

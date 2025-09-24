@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const mediaQuery = window.matchMedia('(max-width: 1439px)');
     let fullpageInstance = null;
+    let isIntermediateStateActive = false;
 
     // ✅ Инициализируем fullPage.js сразу, но отключаем скролл
     function initFullPage() {
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
             controlArrows: false,
             responsiveWidth: 1440,
             scrollingSpeed: 500,
+            isIntermediateStateActive: false,
             scrolling: false, // ❗️ Блокируем скролл до конца анимации
 
             afterLoad: function (origin, destination, direction) {
@@ -53,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // ✅ Все вспомогательные функции
         let lastActiveSlideIndexInSection2 = 0;
         let isScrolling = false;
-        let isIntermediateStateActive = false; // ✅ Флаг промежуточного состояния
+
         const throttleDelay = 800;
 
         function getSectionIndex(sectionObj) {
@@ -104,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let newIndex = currentSlideIndex + delta;
 
             newIndex = Math.max(0, Math.min(newIndex, totalSlides - 1));
-
+            const slide1 = document.querySelectorAll('#section2 .slide')[0];
             // ✅ Промежуточное состояние при первом скролле с 0 на 1
             if (currentSlideIndex === 0 && newIndex === 1 && !isIntermediateStateActive) {
                 event.preventDefault();
@@ -114,15 +116,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 isIntermediateStateActive = true;
 
                 const carousel = document.querySelector('.preview-carousel');
-                const previewItems = document.querySelectorAll('.preview-item');
-                const slide1 = document.querySelectorAll('#section2 .slide')[0];
+                const previewItems = document.querySelectorAll('.preview-item');                      
 
                 if (!carousel || !previewItems[0] || !previewItems[1] || !slide1) {
                     isScrolling = false;
                     isIntermediateStateActive = false;
                     return;
                 }
-
                 // ✅ Плавно скроллим карусель на полпути между 1 и 2 элементом
                 const item1 = previewItems[0];
                 const item2 = previewItems[1];
@@ -133,9 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 smoothScrollToPosition(carousel, targetScrollTop, 500);
 
                 // ✅ Добавляем класс анимации к слайду 1
-                slide1.classList.remove('slide-1-animation');
-                void slide1.offsetWidth;
-                slide1.classList.add('slide-1-animation');
+                slide1.classList.add('slide-animation');
 
                 setTimeout(() => {
                     isScrolling = false;
@@ -156,12 +154,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 fullpageInstance.moveTo(2, 1);
 
                 setTimeout(() => {
-                    isScrolling = false;
+                    isScrolling = false;                    
                 }, throttleDelay);
 
                 return;
             }
-
+            slide1.classList.remove('slide-animation');
             // ❗️ Обычное поведение для всех остальных переходов
             if (newIndex === currentSlideIndex) {
                 return;
@@ -172,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
             activatePreviewForSlide(newIndex);
             fullpageInstance.moveTo(2, newIndex);
 
-            setTimeout(() => {
+            setTimeout(() => {                
                 isScrolling = false;
             }, throttleDelay);
 
