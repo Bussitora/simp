@@ -949,4 +949,146 @@
         padding-bottom:0px;
     }
 
+
+    /************************/
+
+    .fp-slides{
+        position:relative;
+    }
+
+/****************************************/
+
+    .preview-item-mobile{
+        display:flex;
+    }
+
+    
+    .fp_anim{
+        display:flex;
+        position:relative;
+        align-items:center;
+        width:100%;
+        height:auto;
+        margin-top:0px;
+        margin-left:0px;
+    }
+
+    .fp_anim_wheel{
+        position:static;
+        left:0;
+        top:0%;
+        margin-top:0px;
+    }
+
+    .fp_anim_cursor{
+        position:static;
+        right:0;
+        top:0;
+        margin-top:0px;
+    }
+
+    .fp_anim_bryzg{
+        display:none;
+    }
+
+    .fp_anim_text{
+        font-family: var(--second-family);
+        font-size: 24px;
+        width:auto;
+        position:static;
+        right:0%;
+        margin-right:75px;
+        margin-left:57px;
+        height:auto;
+        top:0%;
+        margin-top:0px;
+        max-width:268px;
+    }
+
+    .container_in{
+        align-items: center;
+    }
+
+    .mp_title{
+        align-self: flex-start;
+    }
+    
+    .mp_title_big{
+        font-weight: 300;
+        font-size: 26px;
+        letter-spacing: -0.07em;
+    }
+
+    .mp_slide_1 .container_in{
+        padding:16px 0px;
+    }
+
+    #pi_mobile_1{
+        margin-top:54px;
+    }
+
+    .preview-item-title{
+        font-size: 10px;
+    }
+
+    #pi_mobile_1 .preview-item-text{
+        font-size: 16px;
+        line-height: 120%;
+    }
+
+    .preview-item-mobile{
+        min-height:0;
+    }
+
+    .fp_anim_ob{
+        margin-top:146px;
+    }
+
+    .mp_slide_2 {
+        margin-top:103px;
+    }
+
+    .preview-item-text{
+        font-size:13px;
+    }
+
+    .mp_slide_video_ob{
+        margin-top:52px;
+        margin-left:0;
+        margin-right:0;
+    }
+
+    .mp_slide_3 {
+         margin-top:42px;
+    }
+
+    .mp_scheme_ob{
+        margin-top:85px;
+        margin-left:0;
+        margin-right:0;
+    }
+
+    .mp_scheme{
+        margin-left:0px;
+    }
+
+    .mp_slide_4{
+        margin-top:114px;
+    }
+
+    .mp_pic{
+        margin-top:35px;
+        margin-left:0px;
+        margin-right:0px;
+    }
+
+    #fullpage {
+        height: auto !important;
+        overflow: visible;
+        transform:none !important;
+        background: url('../media/img/mp_d_tablet.svg') center center no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+
 }

@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const productElements = document.querySelectorAll('.mp_products_el');
+
+    productElements.forEach(el => {
+        el.addEventListener('click', function () {
+            this.classList.toggle('act');
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
 
     const ANIMATION_DURATION = 2000; // 2 секунды показа
     const FADE_DURATION = 0;
@@ -85,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         function handleWheelScroll(event) {
+
             if (mediaQuery.matches) {
                 return;
             }
@@ -99,8 +110,25 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!activeSlide || typeof activeSlide.index !== 'number') {
                 return;
             }
-
+            
+            const slideElement = document.querySelectorAll('#section2 .fp-overflow')[activeSlide.index];
+            if (!slideElement) return;
+           
+            // ✅ Проверяем, переполнен ли слайд
+            const { scrollTop, scrollHeight, clientHeight } = slideElement;
             const delta = event.deltaY > 0 ? 1 : -1;
+
+            // Если можно скроллить вниз — НЕ переключаем слайд
+            if (delta > 0 && scrollTop + clientHeight < scrollHeight) {
+                // Разрешаем нативный скролл
+                return;
+            }
+            // Если можно скроллить вверх — НЕ переключаем слайд
+            if (delta < 0 && scrollTop > 0) {
+                // Разрешаем нативный скролл
+                return;
+            }
+
             const currentSlideIndex = activeSlide.index;
             const totalSlides = document.querySelectorAll('#section2 .slide').length;
             let newIndex = currentSlideIndex + delta;
@@ -263,6 +291,23 @@ document.addEventListener('DOMContentLoaded', function () {
                     attachWheelHandler();
                 }
             }
+        });
+
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            if (mediaQuery.matches) return; // не в десктопе — не нужно
+
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                const activeSection = fullpageInstance.getActiveSection();
+                const sectionIndex = getSectionIndex(activeSection);
+                if (sectionIndex === 1) {
+                    const activeSlide = fullpageInstance.getActiveSlide();
+                    if (activeSlide && typeof activeSlide.index === 'number') {
+                        activatePreviewForSlide(activeSlide.index);
+                    }
+                }
+            }, 150); // debounce
         });
 
         document.querySelectorAll('.preview-item').forEach(item => {
