@@ -862,6 +862,15 @@
 
     .newsTg i{
         right:20px;
+    } 
+    
+    .big_link{
+        font-size: 13px;
+        padding:20px;
+    }
+
+    .big_link i{
+        right:20px;
     }
 
     /********************************************************/
@@ -1153,7 +1162,7 @@
     }
 
     .mp_slide_1 .container_in{
-        padding:16px 0px;
+        padding:0px 0px;
     }
 
     #pi_mobile_1{
@@ -1215,12 +1224,77 @@
         margin-right:0px;
     }
 
-    #fullpage {
+    #fullpage.mp_fullpage {
         height: auto !important;
         overflow: visible;
         transform:none !important;
         background: url('../media/img/mp_d_mobile.svg') center center no-repeat;
         background-position: center center;
         background-attachment: fixed;
+        display:flex;
+        flex-direction: column;
+        gap:80px;
+        align-items: center;
+    }
+
+    .mp_distr{
+        padding:0px 0px;
+    }
+
+    /**********************************/
+    .mp_products{
+        padding:0px 0px;
+        flex-direction: column;
+        gap:40px;
+    }
+
+    .mp_products_l{
+        flex-direction: column;
+        gap:20px;
+        flex:1 1 auto;
+        justify-content: flex-start;
+    }
+
+    .mp_products_l_top{
+        max-width:100%;
+    }
+
+    .mp_products_l_bot{
+        max-width:100%;
+        font-size: 16px;
+    }
+
+    .mp_products_el{
+        height:132px;
+    }
+
+    .mp_products_el_type{
+        font-size:10px;
+    }
+
+    .mp_products_el_name{
+         font-size:24px;
+    }
+
+    .mp_products_el_desc{
+        font-size:13px;
+    }
+
+    .mp_products_el_top_l{
+        max-width:192px;
+    }
+
+    .mp_products_el_bot{
+        max-width:192px;
+    }
+
+    .mp_products_el_type{
+        display:flex;
+        flex-direction: column;
+        gap:8px;
+    }
+
+    .mp_products_el_type span{
+        margin-left:0;
     }
 }

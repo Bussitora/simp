@@ -2,7 +2,7 @@
     width:100%;
 }
 
-#fullpage{
+ #fullpage.mp_fullpage {
     background: url('../media/img/mp_d.svg') center center no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -1115,4 +1115,16 @@
 .mp_products_el.act .mp_products_el_bot{
     opacity:1;
     visibility:visible;
+}
+
+.mp_products_el_desc{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--white);
+}
+
+.mp_distr{
+    padding:32px 0px;
 }

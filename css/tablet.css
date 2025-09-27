@@ -768,6 +768,15 @@
 
     .newsTg i{
         right:16px;
+    } 
+    
+    .big_link{
+        font-size: 13px;
+        padding:16px;
+    }
+
+    .big_link i{
+        right:16px;
     }
 
 
@@ -1015,12 +1024,12 @@
     
     .mp_title_big{
         font-weight: 300;
-        font-size: 26px;
+        font-size: 24px;
         letter-spacing: -0.07em;
     }
 
     .mp_slide_1 .container_in{
-        padding:16px 0px;
+        padding:0px 0px;
     }
 
     #pi_mobile_1{
@@ -1082,13 +1091,55 @@
         margin-right:0px;
     }
 
-    #fullpage {
+    #fullpage.mp_fullpage {
         height: auto !important;
         overflow: visible;
         transform:none !important;
         background: url('../media/img/mp_d_tablet.svg') center center no-repeat;
         background-position: center center;
         background-attachment: fixed;
+        display:flex;
+        flex-direction: column;
+        gap:80px;
+        align-items: center;
+    }
+
+    .mp_distr{
+        padding:0px 0px;
+    }
+/**********************************/
+    .mp_products{
+        padding:0px 0px;
+        flex-direction: column;
+        gap:60px;
+    }
+
+    .mp_products_l{
+        flex-direction: row;
+        gap:0;
+        flex:1 1 auto;
+        justify-content: space-between;
+    }
+
+    .mp_products_l_top{
+        max-width:300px;
+    }
+
+    .mp_products_l_bot{
+        max-width:270px;
+        font-size: 13px;
+    }
+
+    .mp_products_el_type{
+        font-size:10px;
+    }
+
+    .mp_products_el_name{
+         font-size:24px;
+    }
+
+    .mp_products_el_desc{
+        font-size:13px;
     }
 
 }

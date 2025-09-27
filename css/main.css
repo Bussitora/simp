@@ -1931,3 +1931,32 @@ input[type="submit"].feedbackFormSubmit{
 .downloadElLink:hover{
     color:var(--white);
 }
+
+.big_link{
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--main);
+    border: 1px solid var(--main);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.big_link i {
+    content: "";
+    width: 18px;
+    height: 34px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -17px;
+    background-image: url(../media/img/arrowRight.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
