@@ -1224,3 +1224,11 @@
 .mp_feedback .feedbackInfoText{
     padding-top:0;
 }
+
+.distrBotEl:hover .distrBotElDesc{
+    transition:0.2s;
+}
+
+.distrBotEl:hover .distrBotElDesc{
+    color: var(--main-hover);
+}
