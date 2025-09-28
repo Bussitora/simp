@@ -1128,3 +1128,99 @@
 .mp_distr{
     padding:32px 0px;
 }
+
+
+/*************************/
+
+.mp_course_container{
+    padding:32px 0px;
+    display:flex;
+    gap:132px;
+}
+
+.mp_course_l{
+    flex:0 0 332px;
+}
+
+.mp_course_r{
+    flex:1 1 auto;
+}
+
+.mp_courses{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+.mp_course{
+    width:calc(50%-8px);
+    padding:20px;
+    border-radius: 12px;
+    background: var(--dark);
+    display:flex;
+    flex-direction: column;
+}
+
+.mp_course_name{
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    color: var(--white);
+}
+
+.mp_course_desc{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--white);
+    margin-top:10px;
+}
+
+.mp_course_desc span{
+    color: var(--second);
+}
+
+.mp_course_pic{
+    margin-top:16px;
+}
+
+.mp_course_pic img{
+    
+}
+
+
+.mp_course i {
+    width: 14px;
+    height: 26px;
+    background-image: url(../media/img/arrowRight.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-self: flex-end;
+    margin-top:10px;
+}
+
+.mp_cours_link{
+    margin-top:16px;
+}
+
+.mp_news{
+    padding:32px 0px;
+}
+
+.mp_feedback{
+    display:flex;
+    flex-direction: column;
+    gap:77px;
+    padding:32px 0px;
+}
+
+.mp_feedback_top{
+    max-width:332px;
+}
+
+.mp_feedback .feedbackInfoText{
+    padding-top:0;
+}

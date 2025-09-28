@@ -1745,6 +1745,7 @@ a.white:hover{
     flex-direction: column;
     border-radius: 12px;
     overflow:hidden;
+    background: var(--dark);
 }
 
 .feedbackFormEl{
@@ -1960,3 +1961,6 @@ input[type="submit"].feedbackFormSubmit{
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+
+

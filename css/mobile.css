@@ -1297,4 +1297,62 @@
     .mp_products_el_type span{
         margin-left:0;
     }
+
+    /*************************/
+
+    .mp_course_container{
+        padding:0px 0px;
+        flex-direction: column;
+        gap:37px;
+    }
+
+    .mp_course_l{
+        flex:0 0 auto;
+        width:100%;
+    }
+
+    .mp_course_r{
+        flex:1 1 auto;
+    }
+
+    .mp_courses{
+        gap:8px;
+        flex-direction: column;
+    }
+
+    .mp_course{
+        width:100%;
+        padding:16px;
+    }
+
+    .mp_course_name{
+        font-size: 24px;
+    }
+
+    .mp_course_desc{
+        font-size: 13px;
+    }
+
+    .mp_cours_link.big_link{
+        margin-top:8px;
+        padding:16px;
+    }
+
+    .mp_news{
+        padding:0px 0px;
+    }
+
+    .mp_feedback{
+        gap:40px;
+        padding:0px 0px;
+    }
+
+    .mp_feedback_top{
+        max-width:100%;
+    }
+
+    .mp_feedback .feedbackInfo{
+        display:none;
+    }
+
 }
