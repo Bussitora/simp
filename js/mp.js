@@ -6,6 +6,15 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.toggle('act');
         });
     });
+
+    document.querySelectorAll('.menu_bottom_col_el.has_child').forEach(item => {
+        item.addEventListener('click', function() {
+            const parentCol = this.closest('.menu_bottom_col');
+            if (parentCol) {
+                parentCol.classList.toggle('act');
+            }
+        });
+    });
 });
 
 document.addEventListener('DOMContentLoaded', function () {

@@ -1191,6 +1191,70 @@
     }
 
     .mp_feedback .feedbackInfo{
+        
+    }
+
+    /******************************/
+
+
+    .mp_clients{
+        padding:0px 0px;
+        min-height:100vh;
+        gap:120px;
+    }
+
+    .mp_clients_container{
+        display:flex;
+        flex-direction: column;
+        gap:60px;
+        flex:1 1 auto;
+        justify-content: center;
+        align-items: center;
+        margin-top:0px;
+        padding-bottom:120px;
+    }
+
+    .mp_client_els_title{
+        font-size: 10px;
+    }
+
+    .mp_client_els{
+        gap:60px;
+        width:544px;
+    }
+
+    .mp_client{
+        min-height:53px;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+    }
+
+
+    /************************/
+
+
+    .menu_footer{
+        gap:40px;
+        padding:0px;
+    }
+
+    .menu_bottom{
+        display:flex;
+        flex-wrap:wrap;
+        gap:8px;
+    }
+
+    .menu_bottom_col{
+        padding: 16px;
+        width:178px;
+    }
+
+    .menu_bottom_col_el_main,.menu_bottom_col_el{
+        font-size: 13px;
+    }
+
+    #section1 .container .mp_bg {
         display:none;
     }
 

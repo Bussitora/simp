@@ -65,6 +65,11 @@ a.white:hover{
     gap:220px;
 }
 
+.fp-responsive .fp-is-overflow.fp-section {
+    height: auto !important;
+    min-height: 0 !important;
+}
+
 .video-wrapper {
     position: relative;
     width: 100%;
