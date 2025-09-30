@@ -288,19 +288,51 @@ a.white:hover{
     display:flex;
     justify-content: center;
     width:100%;
+    gap:4px;
+    z-index:2;
 }
 
 .platformSoc{
     position:relative;
     display:flex;
-    gap:28px;
+    gap:0px;
     background: #2f3235;
-    padding:20px 28px;
+    padding: 0px 14px 0px 0px;
     border-radius: 12px;
-    align-items:center;
+}
+
+.platformSocMain{
+    position:relative;
+    display:flex;
+    gap:0px;
+    background: #2f3235;
+    padding: 0px 14px 0px 0px;
+    border-radius: 12px;
+}
+
+.platformSocPdn{
+    position:relative;
+    gap:0px;
+    background: #2f3235;
+    padding: 0px;
+    border-radius: 12px;
+    display:none;
 }
 
 .platformSocLogo{
+    display:flex;
+    align-items:center;
+    padding:0px 24px;
+    border-radius: 12px;
+    transition:0.2s;
+}
+
+.platformSocLogo:hover{
+    background: #3c4146;
+}
+
+.platformSocLogo::before{
+    content:'';
     width:16px;
     height:17px;
     background:url("../media/img/logo.svg");
@@ -309,16 +341,76 @@ a.white:hover{
     background-position: center center;
 }
 
-.platformSocMenu{
+.platformSocMenuBtn{
     display:flex;
-    gap:22px;
+    align-items:center;
+    padding:0px 21px;
+    border-radius: 12px;
+    transition:0.2s;
 }
 
-.platformSocMenu a{
+.platformSocMenuBtn:hover{
+     background: #3c4146;     
+}
+
+.platformSocMenuBtn::before{
+    content:'';
+    width:21px;
+    height:12px;
+    background:url("../media/img/menuBtn.svg");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
+.platformSocMenuBtnContent{
+    display:none;
+    flex-direction: column;
+    position:absolute;
+    right:0;
+    bottom:70px;
+    background: #2f3235;
+    padding:10px;
+    border-radius:12px;
+    gap:10px;
+}
+
+.platformSocMenuBtnContent a{
+    white-space:nowrap;
+    padding:5px 10px;
+    border-radius:12px;
+    transition:0.2s;
+}
+
+.platformSocMenuBtnContent a:hover{
+    background: #3c4146; 
+    color:#fff;
+}
+
+.platformSocMenu{
+    display:flex;
+    gap:2px;
+}
+
+.platformSocMenuMain{
+    display:flex;
+    gap:2px;
+}
+
+
+.platformSocMenu a, .platformSocMenuMain a{
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 16px;
     color: var(--white);
+    padding:20px 10px;
+    border-radius: 12px;
+    transition:0.2s;
+}
+
+.platformSocMenu a:hover, .platformSocMenuMain a:hover{
+    color: var(--white);
+    background: #3c4146;
 }
 
 /************************************/

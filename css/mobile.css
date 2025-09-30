@@ -62,12 +62,21 @@
         gap:24px;
     }
 
-    .platformSoc{
-
+    .platformSocMenuBtnContent.act{
+        display:flex;
     }
 
-    .platformSocMenu a {
+    .platformSocMenu a{
         font-size: 13px;
+    }
+
+    .platformSocMain .platformSocMenu{
+        display:none;
+    }
+
+    .platformSocMain{
+        padding:0;
+        height: 60px;
     }
 
     .platformContentMediaMenu span{
@@ -1450,6 +1459,10 @@
 
     #section1 .container .mp_bg {
         display:none;
+    }
+
+    .platformSocPdn{
+        display:flex;
     }
     
 }

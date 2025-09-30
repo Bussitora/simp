@@ -15,6 +15,24 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+
+    const menuBtn = document.querySelector('.platformSocMenuBtn');
+    const menuContent = document.querySelector('.platformSocMenuBtnContent');
+
+    // Переключение меню при клике на кнопку
+    menuBtn.addEventListener('click', function (e) {
+        e.stopPropagation(); // Предотвращаем всплытие, чтобы не сработал обработчик document
+        menuContent.classList.toggle('act');
+    });
+
+    // Закрытие меню при клике вне его области
+    document.addEventListener('click', function (e) {
+        if (!menuContent.contains(e.target) && !menuBtn.contains(e.target)) {
+            menuContent.classList.remove('act');
+        }
+    });
+    
 });
 
 document.addEventListener('DOMContentLoaded', function () {
