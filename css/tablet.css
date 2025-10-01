@@ -1095,13 +1095,16 @@
         height: auto !important;
         overflow: visible;
         transform:none !important;
-        background: url('../media/img/mp_d_tablet.svg') center center no-repeat;
-        background-position: center center;
-        background-attachment: fixed;
         display:flex;
         flex-direction: column;
         gap:80px;
         align-items: center;
+    }
+
+    .main_bg{
+        background: url('../media/img/mp_d_tablet.svg') center center no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
     }
 
     .mp_distr{
@@ -1236,6 +1239,9 @@
 
     .menu_footer{
         gap:40px;
+    }
+
+    .mp_fullpage .menu_footer{
         padding:0px;
     }
 
@@ -1256,6 +1262,220 @@
 
     #section1 .container .mp_bg {
         display:none;
+    }
+
+/*************************/
+
+    .course_container{
+        padding:16px 0px 0px 0px;
+        flex-direction: column;
+        gap:46px;
+    }
+
+    .course_l{
+        flex:0 0 auto;
+        width:320px;
+    }
+
+    .course_r{
+        flex:1 1 auto;
+    }
+
+    .courses{
+        gap:8px;
+    }
+
+    .course{
+        width:calc(50% - 4px);
+        padding:16px;
+    }
+
+    .course_name{
+        font-size: 24px;
+    }
+
+    .course_desc{
+        font-size: 13px;
+    }
+        
+    .inner_title{
+        gap:16px;
+    }
+
+    .inner_title_big{
+        font-size: 22px;
+    }
+
+    .courses_main{
+      gap: 120px;
+    }
+
+    /******************************/
+    
+    .single_course_container{
+        gap:80px;
+        padding-top:16px;
+    }
+
+    .single_course_container_bot{
+        gap:32px;
+    }
+
+    .single_course_container_bot_title{
+        font-size: 10px;
+    }
+
+    .single_course_container_bot_courses{
+        gap:8px;
+    }
+
+    .single_course_container_bot_course{
+        width:calc(50% - 4px);
+        padding:16px;
+    }
+
+    .single_course_container_bot_course_name{
+        font-size: 24px;
+    }
+
+    .single_course_container_bot_course_desc{
+        font-size: 13px;
+    }
+
+    .single_course_container_bot_course_pic{
+        margin-top:16px;
+        max-height:190px;
+    }
+
+    .single_course_container_bot_course_link{
+        justify-content: flex-end;
+    }
+
+    .single_course_container_bot_course_link span{
+        display:none;
+    }
+
+
+
+    .single_course_container_mid{
+        flex-direction: column;
+        gap:60px;
+    }
+
+    .single_course_container_mid_l{
+        display:flex;
+        gap:16px;
+    }
+
+    .single_course_container_mid_for_els span,.single_course_container_mid_req_els span{
+        font-size: 13px;
+    }
+
+    .single_course_container_mid_title{
+        font-size: 10px;
+    }
+
+    .single_course_container_mid_teacher{
+        width:264px;
+    }
+
+    .single_course_container_mid_teacher_text_name{
+         font-size: 13px;
+    }
+
+    .single_course_container_mid_teacher_text_desc{
+        font-size: 10px;
+    }
+
+    /***************/
+
+    .single_course_container_top{
+        gap:40px;
+        flex-direction: column;
+    }
+
+    .single_course_main .inner_title{
+        max-width:332px;
+    }
+
+    .single_course_container_l{
+        width:100%;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap:32px;
+    }
+
+    .single_course_container_desc{
+        max-width: 271px;
+        font-size: 13px;
+    }
+
+    .single_course_container_r{
+        display:flex;
+        flex:1 1 auto;
+        gap:8px;
+    }
+
+    .single_course_container_r>div{
+        width:364px;
+        display:flex;
+    }
+
+    .single_course_desc_title{
+        font-size: 10px;
+    }
+
+    .single_course_desc_big{
+        margin-top:40px;
+        font-size: 16px;
+        max-width:228px;
+    }
+
+    .single_course_desc_small{
+        margin-top:16px;
+        font-size: 13px;
+        max-width:228px;
+    }
+
+    .single_course_container_r_r{
+        display:flex;
+        flex-direction: column;
+        gap:8px;
+    }
+
+    .single_course_about{
+        padding:16px;
+        gap:67px;
+    }
+
+    .single_course_about_title{
+        font-size: 10px;
+    }
+
+    .single_course_about_els{
+        gap:16px;
+    }
+
+    .single_course_about_el_number{
+        font-size: 24px;
+    }
+
+    .single_course_about_el_text{  
+        font-size: 13px;
+    }
+
+    .single_course_pic_link{
+        min-height:265px;
+        gap:26px;
+    }
+
+    .single_course_pic_link>span{
+        font-size: 13px;
+    }
+
+    .single_course_pic_link>a{
+        font-size: 13px;
     }
 
 }

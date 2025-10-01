@@ -1307,7 +1307,45 @@ a.white:hover{
 }
 
 /**************************************************/
+.menu_footer{
+    display:flex;
+    flex-direction: column;
+    gap:140px;
+}
 
+.mp_fullpage .menu_footer{
+    padding:32px 0px 0px;
+}
+
+.menu_bottom{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+}
+
+.menu_bottom_col{
+    border: 1px solid rgba(25, 149, 252, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    display:flex;
+    flex-direction: column;
+    gap: 32px;
+    width:216px;
+}
+
+.menu_bottom_col_in{
+    display:flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.menu_bottom_col_el_main,.menu_bottom_col_el{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--main);
+}
 
 .footerIn{
     /*height:226px;*/
@@ -2059,5 +2097,62 @@ input[type="submit"].feedbackFormSubmit{
     background-repeat: no-repeat;
 }
 
+
+
+.inner_title{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.inner_title_big{
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    color: var(--white);
+}
+
+.inner_title_small{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 120%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--second);
+    display:flex;
+    gap:20px;
+}
+
+.inner_title_small a{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 120%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--500-white);    
+}
+
+.inner_title_small a:hover{
+    color: #8c8c8c;
+}
+
+.inner_title_small span{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 120%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--third);
+}
+
+.main_bg {
+    background: url('../media/img/mp_d.svg') center center no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
 
 
