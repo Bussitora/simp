@@ -290,6 +290,7 @@ a.white:hover{
     width:100%;
     gap:4px;
     z-index:2;
+    pointer-events:none;
 }
 
 .platformSoc{
@@ -298,7 +299,7 @@ a.white:hover{
     gap:0px;
     background: #2f3235;
     padding: 0px 14px 0px 0px;
-    border-radius: 12px;
+    border-radius: 12px;    
 }
 
 .platformSocMain{
@@ -308,9 +309,11 @@ a.white:hover{
     background: #2f3235;
     padding: 0px 14px 0px 0px;
     border-radius: 12px;
+    pointer-events:all;
 }
 
 .platformSocPdn{
+     pointer-events:all;
     position:relative;
     gap:0px;
     background: #2f3235;
