@@ -1,5 +1,6 @@
 .smp_main{
     padding-top:32px;
+    overflow:hidden;
 }
 
 .smp_header{
@@ -386,4 +387,100 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+.smp_sl_5{
+    margin-top:186px;
+    display:flex;
+    gap:132px;
+}
+
+.smp_sl_5_l{
+    flex:0 0 332px;
+}
+
+.smp_sl_5_r{
+    display:flex;
+    flex-wrap: wrap;
+    gap:16px;
+}
+
+.smp_sl_5_r_el{
+    flex:1 1 448px;
+    background: var(--dark);
+    border-radius: 12px;
+}
+
+.smp_sl_5_r_el_pic{
+    display:flex;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.smp_sl_5_r_el_pic img{
+    border-radius: 12px;
+}
+
+.smp_sl_5_r_el_text{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--white);
+    padding:20px;
+}
+
+.smp_sl_6{
+    display:flex;
+    gap:132px;
+    padding-top:300px;
+    padding-bottom:400px;
+}
+
+.smp_sl_6_l{
+    flex:0 0 332px;
+}
+
+.smp_sl_6_r{
+    flex:1 1 auto;
+}
+
+.smp_sl_6_carousel{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.smp_sl_6_carousel_top{
+    display:flex;
+    gap:16px;
+}
+
+.smp_sl_6_carousel_bot{
+    display:flex;
+    gap:16px;
+}
+
+.smp_sl_6_carousel_el{
+    width: 564px;
+    aspect-ratio: 564 / 388;
+    flex:0 0 564px;
+    border: 1px solid var(--main);
+    border-radius: 12px;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size: contain;
+    display:flex;
+    align-items:flex-end;
+    padding:20px;
+    position:relative;
+}
+
+.smp_sl_6_carousel_el span{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--main);
 }

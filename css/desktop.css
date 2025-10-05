@@ -15,4 +15,63 @@
         justify-content: flex-start;
     }
 
+    .smp_sl_6_carousel.act{
+        animation-name: scrollBot;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;    
+        animation-direction: alternate;
+    }
+
+    .smp_sl_6_carousel.act .smp_sl_6_carousel_top{
+        animation-name: scrollLeft;
+        transform-origin:left center;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;   
+        animation-direction: alternate;
+    }
+
+    .smp_sl_6_carousel.act .smp_sl_6_carousel_bot{
+        animation-name: scrollRight;
+        transform-origin:right center;
+        transform: translatex(-1380px);
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;    
+        animation-direction: alternate;
+    }
+    @keyframes scrollBot {
+        0%{
+            transform: translateY(0px);
+        } 
+        33%{
+            transform:  translateY(200px);
+        }
+        66%{
+            transform:  translateY(200px);
+        }
+        100%{
+            transform: translateY(200px);
+        }
+    }
+
+    @keyframes scrollLeft {
+        0%{
+            transform: translateX(0px);
+        }
+        100%{
+            transform: translateX(-1380px);
+        }
+    }
+
+    @keyframes scrollRight {
+        0%{
+            transform: translateX(-1380px);
+        }
+        100%{
+            transform: translateX(0px);
+        }
+    }
+
 }

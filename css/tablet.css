@@ -1638,4 +1638,128 @@
         font-size: 13px;
     }
 
+    .smp_sl_5{
+        margin-top:160px;        
+        flex-direction: column;
+        gap:60px;
+    }
+
+    .smp_sl_5_l{
+        flex:1 1 100%;
+    }
+
+    .smp_sl_5_r_el{
+        flex:1 1 360px; 
+    }
+
+    .smp_sl_5_r_el_text{
+        font-size: 13px;
+        padding:20px 16px;
+    }
+
+    /****************************************/
+
+    .smp_sl_6{
+        flex-direction: column;
+        display:flex;
+        gap:60px;
+        padding-top:176px;
+        padding-bottom:200px;
+    }
+
+    .smp_sl_6_l{
+        flex:1 1 auto;
+        width:332px;
+    }
+
+    .smp_sl_6_carousel{
+        display: flex;
+        flex-direction: column;
+        gap:16px;
+    }
+
+    .smp_sl_6_carousel_top{
+        display:flex;
+        gap:16px;
+        flex-wrap: wrap;
+        width: 1144px;
+    }
+
+    .smp_sl_6_carousel_bot{
+        display:flex;
+        gap:16px;
+        flex-wrap: wrap;
+        width: 1144px;
+    }
+
+    .smp_sl_6_carousel_el{
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;    
+        animation-direction: alternate; 
+    }
+
+    .smp_sl_6_carousel_top .smp_sl_6_carousel_el:nth-child(1),
+    .smp_sl_6_carousel_top .smp_sl_6_carousel_el:nth-child(2){
+        transform:translateX(0px);
+    } 
+
+    .smp_sl_6_carousel.act2 .smp_sl_6_carousel_top .smp_sl_6_carousel_el:nth-child(1),
+    .smp_sl_6_carousel.act2 .smp_sl_6_carousel_top .smp_sl_6_carousel_el:nth-child(2){
+        animation-name: scrollLeft;
+    } 
+    
+    .smp_sl_6_carousel_top .smp_sl_6_carousel_el:nth-child(3),
+    .smp_sl_6_carousel_top .smp_sl_6_carousel_el:nth-child(4){
+        transform:translateX(-407px);       
+    }
+
+    .smp_sl_6_carousel.act2 .smp_sl_6_carousel_top .smp_sl_6_carousel_el:nth-child(3),
+    .smp_sl_6_carousel.act2 .smp_sl_6_carousel_top .smp_sl_6_carousel_el:nth-child(4){
+        animation-name: scrollRight;
+    }
+
+    .smp_sl_6_carousel_bot .smp_sl_6_carousel_el:nth-child(3),
+    .smp_sl_6_carousel_bot .smp_sl_6_carousel_el:nth-child(4){
+        transform:translateX(-407px);        
+    }
+
+    .smp_sl_6_carousel.act2 .smp_sl_6_carousel_bot .smp_sl_6_carousel_el:nth-child(3),
+    .smp_sl_6_carousel.act2 .smp_sl_6_carousel_bot .smp_sl_6_carousel_el:nth-child(4){
+        animation-name: scrollRight;
+    }
+
+    .smp_sl_6_carousel_bot .smp_sl_6_carousel_el:nth-child(1),
+    .smp_sl_6_carousel_bot .smp_sl_6_carousel_el:nth-child(2){
+        transform:translateX(0px);       
+    }
+
+    .smp_sl_6_carousel.act2 .smp_sl_6_carousel_bot .smp_sl_6_carousel_el:nth-child(1),
+    .smp_sl_6_carousel.act2 .smp_sl_6_carousel_bot .smp_sl_6_carousel_el:nth-child(2){
+        animation-name: scrollLeft;
+    }
+
+    @keyframes scrollLeft {
+        0%{
+            transform: translateX(0px);
+        }
+        100%{
+            transform: translateX(-407px);
+        }
+    }
+
+    @keyframes scrollRight {
+        0%{
+            transform: translateX(-407px);
+        }
+        100%{
+            transform: translateX(0px);
+        }
+    }
+
+    .smp_sl_6_carousel_el span{
+        font-size: 13px;
+    }
+
+
 }
