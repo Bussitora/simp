@@ -1664,7 +1664,6 @@
         display:flex;
         gap:60px;
         padding-top:176px;
-        padding-bottom:200px;
     }
 
     .smp_sl_6_l{
@@ -1761,5 +1760,20 @@
         font-size: 13px;
     }
 
+
+    .smp_sl_7{
+        margin-top:30px;
+        gap:40px;
+    }
+
+    .smp_sl_7_title{
+        font-size: 10px;
+    }
+
+    .smp_sl_7_els{
+        display:flex;
+        gap:64px;
+        flex-wrap: wrap;
+    }
 
 }

@@ -1912,7 +1912,6 @@
         display:flex;
         gap:38px;
         padding-top:132px;
-        padding-bottom:132px;
     }
 
     .smp_sl_6_l{
@@ -1946,6 +1945,22 @@
 
     .smp_sl_6_carousel_el span{
         font-size: 13px;
+    }
+
+    .smp_sl_7{
+        margin-top: -46px;
+        gap: 40px;
+        height: 700px;
+    }
+
+    .smp_sl_7_title{
+        font-size: 10px;
+    }
+
+    .smp_sl_7_els{
+        display:flex;
+        gap:48px;
+        flex-wrap: wrap;
     }
 
 }
