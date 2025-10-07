@@ -27,4 +27,14 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(track);
     observer2.observe(track);
   });
+
+  document.querySelectorAll('.smp_4_faq_el_title').forEach(item => {
+      item.addEventListener('click', function() {
+          const parentCol = this.closest('.smp_4_faq_el');
+          if (parentCol) {
+              parentCol.classList.toggle('act');
+          }
+      });
+  });
+
 });

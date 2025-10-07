@@ -734,4 +734,66 @@
 
 .smp_sl_9_r{
     flex:1 1 auto;
+    display:flex;
+    flex-direction: column;
+}
+
+.smp_4_faq_el_text{
+    display:none;
+    padding-bottom:28px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--white);
+}
+
+.smp_4_faq_el.act .smp_4_faq_el_text{
+    display:block;
+}
+
+.smp_4_faq_els{
+    display:flex;
+    flex-direction: column;
+    gap:32px;
+}
+
+.smp_4_faq_el{
+    display:flex;
+    flex-direction: column;
+    gap:32px;
+}
+
+.smp_4_faq_el_title{
+    display:flex;
+    gap:30px;
+    justify-content: space-between;
+    align-items: center;
+    cursor:pointer;
+}
+
+.smp_4_faq_el_title span{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 120%;
+    color: var(--main);
+    transition:0.2s;
+}
+
+.smp_4_faq_el_title:hover span{
+    /*color: var(--main-hover);*/
+}
+
+.smp_4_faq_el_title::after{
+    content:'';
+    flex:0 0 14px;
+    height:26px;
+    background:url("../media/img/arr_bottom.svg") center center no-repeat;
+    background-size:contain;
+    transition:0.2s;
+}
+
+.smp_4_faq_el.act .smp_4_faq_el_title::after{
+    transform:rotate(180deg);
 }

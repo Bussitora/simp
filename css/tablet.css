@@ -1784,4 +1784,22 @@
         display:none;
     }
 
+    .smp_sl_9{
+        margin:160px 0px;
+        flex-direction: column;
+        gap:60px;
+    }
+
+    .smp_sl_9_l{
+        flex:1 1 auto;
+    }
+
+    .smp_4_faq_el_title span{
+        font-size:16px;
+    }
+
+    .smp_4_faq_el_text{
+        font-size: 13px;
+    }
+
 }
