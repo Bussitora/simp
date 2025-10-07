@@ -1963,4 +1963,21 @@
         flex-wrap: wrap;
     }
 
+    .smp_sl_8_mobile{
+        display:flex;
+    }
+
+    .smp_sl_8_desktop{
+        display:none;
+    }
+
+    .smp_sl_8_mobile_col{
+        gap:16px;
+        padding:16px;
+    }
+
+    .smp_sl_8_mobile_link{
+        margin:8px -18px -17px;
+    }
+
 }

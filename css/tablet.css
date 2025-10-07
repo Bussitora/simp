@@ -1776,4 +1776,12 @@
         flex-wrap: wrap;
     }
 
+    .smp_sl_8_mobile{
+        display:flex;
+    }
+
+    .smp_sl_8_desktop{
+        display:none;
+    }
+
 }
