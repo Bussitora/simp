@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+  setupLottie('lottie_1', a1);
+  setupLottie('lottie_3', a3);
+  setupLottie('lottie_5', a5);
+
   const carousel = document.querySelectorAll('.smp_sl_6_carousel');
 
   const observer = new IntersectionObserver((entries) => {
@@ -38,3 +43,32 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 });
+
+function setupLottie(containerId, animationData) {
+  const SPEED = 2;
+  const container = document.getElementById(containerId);
+  const anim = lottie.loadAnimation({
+    container,
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    animationData
+  });
+
+  let isHovered = false;
+
+  container.addEventListener('mouseenter', () => {
+    if (isHovered) return;
+    isHovered = true;
+    anim.setDirection(1);
+    anim.setSpeed(SPEED);
+    anim.play();
+  });
+
+  container.addEventListener('mouseleave', () => {
+    isHovered = false;
+    anim.setDirection(-1);
+    anim.setSpeed(SPEED);
+    anim.play();
+  });
+}

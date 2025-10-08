@@ -1839,6 +1839,10 @@
         flex: 1 1 100%;       
     }
 
+    .smp_sl_3_r_el{
+        flex:0 0 100%;
+    }
+
     .smp_sl_3_r_el_title{
         font-size: 24px;
     }

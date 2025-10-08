@@ -279,7 +279,7 @@
 }
 
 .smp_sl_3_r_el{
-    flex: 1 1 293px;
+    flex: 0 0 293px;
     display:flex;
     flex-direction: column;
     gap:25px;
@@ -309,6 +309,10 @@
 .smp_sl_3_r_el_pic{
     display:flex;
     justify-content: center;
+}
+
+.smp_sl_3_r_el_pic img{
+    visibility:hidden;
 }
 
 
