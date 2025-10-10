@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  setupLottie('lottie_1', a1);
-  setupLottie('lottie_3', a3);
-  setupLottie('lottie_5', a5);
+  // setupLottie('lottie_1', a1);
+  // setupLottie('lottie_3', a3);
+  // setupLottie('lottie_5', a5);
 
   const carousel = document.querySelectorAll('.smp_sl_6_carousel');
 
