@@ -223,6 +223,10 @@
     justify-content: center;
 }
 
+#section2 .slide .container_in{
+    position:relative;
+}
+
 @media (max-width: 1439px) {
 
     .section {
