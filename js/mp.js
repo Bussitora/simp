@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const intro = document.getElementById('fp_welcome');
     const simpleAnimWheel = document.getElementById('simpleAnimWheel');
 
-    // ✅ Запускаем анимацию вступления
     if (intro) {
         setTimeout(() => {
             intro.classList.add('fade-out');
@@ -58,16 +57,39 @@ document.addEventListener('DOMContentLoaded', function () {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 simpleAnimWheel.classList.add('slide-animation');
-                console.log('Элемент в области видимости')
             } else {
                 simpleAnimWheel.classList.remove('slide-animation');                
             }
         })
         }, {
-        threshold: 0.8 // элемент считается видимым, если хотя бы 10% его площади в viewport
+        threshold: 0.7
         })
 
         observer.observe(simpleAnimWheel)        
     }
 
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const slide = entry.target;
+      const previewItems = slide.querySelectorAll('.preview-item');
+
+      if (entry.intersectionRatio >= 0.7) {
+        slide.classList.add('active');
+        previewItems.forEach(item => item.classList.add('active'));
+      } else {
+        slide.classList.remove('active');
+        previewItems.forEach(item => item.classList.remove('active'));
+      }
+    });
+  }, {
+    threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+  });
+
+  document.querySelectorAll('.slide').forEach(slide => {
+    observer.observe(slide);
+  });
 });
