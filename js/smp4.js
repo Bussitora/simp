@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   setupLottie('lottie_1', a1);
   setupLottie('lottie_2', a2);
-  setupLottie('lottie_3', a11);
+  setupLottie('lottie_3', a3);
   setupLottie('lottie_4', a4);
   setupLottie('lottie_5', a5);
   setupLottie('lottie_6', a6);
